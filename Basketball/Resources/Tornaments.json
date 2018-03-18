@@ -1,0 +1,9 @@
+{
+    "tornaments": [
+        {
+          "id": 0,
+          "name": "School Tornament",
+          "matcheIds": [0,1,2,3]
+        }
+    ]
+}

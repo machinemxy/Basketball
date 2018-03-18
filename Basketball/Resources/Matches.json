@@ -1,0 +1,20 @@
+{
+    "matches": [
+        {
+          "id": 0,
+          "name": "1st Match VS Class 1"
+        },
+        {
+          "id": 1,
+          "name": "2nd Match VS Class 7"
+        },
+        {
+          "id": 2,
+          "name": "Semifinal VS Class 3"
+        },
+        {
+          "id": 9,
+          "name": "Final VS Class 9"
+        }
+    ]
+}
