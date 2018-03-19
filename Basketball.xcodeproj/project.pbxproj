@@ -16,6 +16,7 @@
 		228985DF205E956D00F3B722 /* MatchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985DE205E956D00F3B722 /* MatchTableViewController.swift */; };
 		228985E7205E9BC700F3B722 /* Tornament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985E6205E9BC700F3B722 /* Tornament.swift */; };
 		228985E9205E9C5400F3B722 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985E8205E9C5400F3B722 /* Match.swift */; };
+		228985EA206000D000F3B722 /* Tornaments.json in Resources */ = {isa = PBXBuildFile; fileRef = 228985E4205E99E400F3B722 /* Tornaments.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +30,6 @@
 		228985DB205E923E00F3B722 /* DefaultKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultKey.swift; sourceTree = "<group>"; };
 		228985DE205E956D00F3B722 /* MatchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewController.swift; sourceTree = "<group>"; };
 		228985E4205E99E400F3B722 /* Tornaments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Tornaments.json; sourceTree = "<group>"; };
-		228985E5205E99F600F3B722 /* Matches.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Matches.json; sourceTree = "<group>"; };
 		228985E6205E9BC700F3B722 /* Tornament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tornament.swift; sourceTree = "<group>"; };
 		228985E8205E9C5400F3B722 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				228985E4205E99E400F3B722 /* Tornaments.json */,
-				228985E5205E99F600F3B722 /* Matches.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -163,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228985EA206000D000F3B722 /* Tornaments.json in Resources */,
 				228985D4205E897600F3B722 /* LaunchScreen.storyboard in Resources */,
 				228985D1205E897600F3B722 /* Assets.xcassets in Resources */,
 				228985CF205E897600F3B722 /* Main.storyboard in Resources */,

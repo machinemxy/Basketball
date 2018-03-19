@@ -8,9 +8,8 @@
 
 import Foundation
 
-struct Tornament {
+struct Tornament: Codable {
 	var id = 0
 	var name = ""
-	var matchIds = [Int]()
 	var matches = [Match]()
 }

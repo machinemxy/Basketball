@@ -9,6 +9,7 @@
 import UIKit
 
 class MatchTableViewController: UITableViewController {
+	var allTornaments = [Tornament]()
 	var tornaments = [Tornament]()
 
     override func viewDidLoad() {
@@ -32,27 +33,26 @@ class MatchTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return allTornaments.count
     }
 	
 	override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-		return ""
+		return allTornaments[section].name
 	}
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return allTornaments[section].matches.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath)
 
         // Configure the cell...
+		cell.textLabel?.text = allTornaments[indexPath.section].matches[indexPath.row].name
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -102,6 +102,11 @@ class MatchTableViewController: UITableViewController {
 	private func initTornaments() {
 		let maxTornamentId = UserDefaults.standard.integer(forKey: DefaultKey.TORNAMENT)
 		let maxMatchId = UserDefaults.standard.integer(forKey: DefaultKey.MATCH)
-		//need json decoder!
+		
+		let jsonDecoder = JSONDecoder()
+		if let tornamentsFile = Bundle.main.path(forResource: "Tornaments", ofType: "json") {
+			let data = try! Data(contentsOf: URL(fileURLWithPath: tornamentsFile))
+			allTornaments = try! jsonDecoder.decode([Tornament].self, from: data)
+		}
 	}
 }
