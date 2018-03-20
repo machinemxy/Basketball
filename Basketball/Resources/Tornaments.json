@@ -5,19 +5,23 @@
 		"matches":[
 			{
 				"id": 0,
-				"name": "1st Match VS Class 1"
+				"name": "VS Class 1",
+				"subtitle": "1st Match"
 			},
 			{
 				"id": 1,
-				"name": "2nd Match VS Class 7"
+				"name": "VS Class 7",
+				"subtitle": "2nd Match"
 			},
 			{
 				"id": 2,
-				"name": "Semifinal VS Class 3"
+				"name": "VS Class 3",
+				"subtitle":"Semifinal"
 			},
 			{
-				"id": 9,
-				"name": "Final VS Class 9"
+				"id": 3,
+				"name": "VS Class 9",
+				"subtitle": "Final"
 			}
 		]
 	}

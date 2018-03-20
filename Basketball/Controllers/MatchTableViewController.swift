@@ -15,14 +15,14 @@ class MatchTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		initTornaments()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+		fetchAllTornaments()
     }
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		setAvailableTornaments()
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -33,23 +33,24 @@ class MatchTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return allTornaments.count
+        return tornaments.count
     }
 	
 	override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-		return allTornaments[section].name
+		return tornaments[section].name
 	}
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return allTornaments[section].matches.count
+        return tornaments[section].matches.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath)
 
         // Configure the cell...
-		cell.textLabel?.text = allTornaments[indexPath.section].matches[indexPath.row].name
+		cell.textLabel?.text = tornaments[indexPath.section].matches[indexPath.row].name
+		cell.detailTextLabel?.text = tornaments[indexPath.section].matches[indexPath.row].subtitle
 
         return cell
     }
@@ -99,14 +100,33 @@ class MatchTableViewController: UITableViewController {
     }
     */
 	
-	private func initTornaments() {
-		let maxTornamentId = UserDefaults.standard.integer(forKey: DefaultKey.TORNAMENT)
-		let maxMatchId = UserDefaults.standard.integer(forKey: DefaultKey.MATCH)
-		
+	private func fetchAllTornaments() {
 		let jsonDecoder = JSONDecoder()
 		if let tornamentsFile = Bundle.main.path(forResource: "Tornaments", ofType: "json") {
 			let data = try! Data(contentsOf: URL(fileURLWithPath: tornamentsFile))
 			allTornaments = try! jsonDecoder.decode([Tornament].self, from: data)
 		}
+	}
+	
+	private func setAvailableTornaments() {
+		let maxTornamentId = UserDefaults.standard.integer(forKey: DefaultKey.TORNAMENT)
+		let maxMatchId = UserDefaults.standard.integer(forKey: DefaultKey.MATCH)
+		
+		tornaments = [Tornament]()
+		for i in 0...maxTornamentId {
+			tornaments.append(allTornaments[i])
+			if i == maxTornamentId {
+				tornaments[i].matches = [Match]()
+				for match in allTornaments[i].matches {
+					if match.id <= maxMatchId {
+						tornaments[i].matches.append(match)
+					} else {
+						break
+					}
+				}
+			}
+		}
+		
+		tableView.reloadData()
 	}
 }
