@@ -9,7 +9,7 @@
 import Foundation
 
 struct Match: Codable {
-	var id = 0
-	var name = ""
-	var subtitle = ""
+	var id: Int
+	var name: String
+	var subtitle: String
 }

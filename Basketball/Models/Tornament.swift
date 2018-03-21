@@ -9,7 +9,7 @@
 import Foundation
 
 struct Tornament: Codable {
-	var id = 0
-	var name = ""
-	var matches = [Match]()
+	var id: Int
+	var name: String
+	var matches: [Match]
 }

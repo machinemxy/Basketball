@@ -1,27 +1,27 @@
 [
 	{
-		"id": 0,
-		"name": "School Tornament",
+		"id":0,
+		"name":"School Tornament",
 		"matches":[
 			{
-				"id": 0,
-				"name": "VS Class 1",
-				"subtitle": "1st Match"
+				"id":0,
+				"name":"VS Class 1",
+				"subtitle":"1st Match"
 			},
 			{
-				"id": 1,
-				"name": "VS Class 7",
-				"subtitle": "2nd Match"
+				"id":1,
+				"name":"VS Class 7",
+				"subtitle":"2nd Match"
 			},
 			{
-				"id": 2,
-				"name": "VS Class 3",
+				"id":2,
+				"name":"VS Class 3",
 				"subtitle":"Semifinal"
 			},
 			{
-				"id": 3,
-				"name": "VS Class 9",
-				"subtitle": "Final"
+				"id":3,
+				"name":"VS Class 9",
+				"subtitle":"Final"
 			}
 		]
 	}

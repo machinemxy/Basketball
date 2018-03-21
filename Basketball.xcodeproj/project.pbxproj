@@ -17,6 +17,13 @@
 		228985E7205E9BC700F3B722 /* Tornament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985E6205E9BC700F3B722 /* Tornament.swift */; };
 		228985E9205E9C5400F3B722 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985E8205E9C5400F3B722 /* Match.swift */; };
 		228985EA206000D000F3B722 /* Tornaments.json in Resources */ = {isa = PBXBuildFile; fileRef = 228985E4205E99E400F3B722 /* Tornaments.json */; };
+		228985ED20622EAA00F3B722 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985EC20622EAA00F3B722 /* Player.swift */; };
+		228985EF2062352800F3B722 /* DefaultPlayers.json in Resources */ = {isa = PBXBuildFile; fileRef = 228985EE2062352800F3B722 /* DefaultPlayers.json */; };
+		228985F32062421C00F3B722 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228985F12062421C00F3B722 /* RealmSwift.framework */; };
+		228985F42062421C00F3B722 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228985F22062421C00F3B722 /* Realm.framework */; };
+		228985F72062456300F3B722 /* PlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985F62062456300F3B722 /* PlayerTableViewController.swift */; };
+		228985F9206245F800F3B722 /* MyPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985F8206245F800F3B722 /* MyPlayer.swift */; };
+		228985FB206251B300F3B722 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985FA206251B300F3B722 /* JsonHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +39,13 @@
 		228985E4205E99E400F3B722 /* Tornaments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Tornaments.json; sourceTree = "<group>"; };
 		228985E6205E9BC700F3B722 /* Tornament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tornament.swift; sourceTree = "<group>"; };
 		228985E8205E9C5400F3B722 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		228985EC20622EAA00F3B722 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		228985EE2062352800F3B722 /* DefaultPlayers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DefaultPlayers.json; sourceTree = "<group>"; };
+		228985F12062421C00F3B722 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		228985F22062421C00F3B722 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		228985F62062456300F3B722 /* PlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewController.swift; sourceTree = "<group>"; };
+		228985F8206245F800F3B722 /* MyPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlayer.swift; sourceTree = "<group>"; };
+		228985FA206251B300F3B722 /* JsonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228985F32062421C00F3B722 /* RealmSwift.framework in Frameworks */,
+				228985F42062421C00F3B722 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +66,7 @@
 			children = (
 				228985C8205E897600F3B722 /* Basketball */,
 				228985C7205E897600F3B722 /* Products */,
+				228985F02062421B00F3B722 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +90,7 @@
 				228985D2205E897600F3B722 /* LaunchScreen.storyboard */,
 				228985D5205E897600F3B722 /* Info.plist */,
 				228985DB205E923E00F3B722 /* DefaultKey.swift */,
+				228985FA206251B300F3B722 /* JsonHelper.swift */,
 			);
 			path = Basketball;
 			sourceTree = "<group>";
@@ -82,6 +100,7 @@
 			children = (
 				228985CB205E897600F3B722 /* ViewController.swift */,
 				228985DE205E956D00F3B722 /* MatchTableViewController.swift */,
+				228985F62062456300F3B722 /* PlayerTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -91,6 +110,8 @@
 			children = (
 				228985E6205E9BC700F3B722 /* Tornament.swift */,
 				228985E8205E9C5400F3B722 /* Match.swift */,
+				228985EC20622EAA00F3B722 /* Player.swift */,
+				228985F8206245F800F3B722 /* MyPlayer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -99,8 +120,18 @@
 			isa = PBXGroup;
 			children = (
 				228985E4205E99E400F3B722 /* Tornaments.json */,
+				228985EE2062352800F3B722 /* DefaultPlayers.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		228985F02062421B00F3B722 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				228985F22062421C00F3B722 /* Realm.framework */,
+				228985F12062421C00F3B722 /* RealmSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,6 +144,7 @@
 				228985C2205E897600F3B722 /* Sources */,
 				228985C3205E897600F3B722 /* Frameworks */,
 				228985C4205E897600F3B722 /* Resources */,
+				228985F5206242B000F3B722 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -163,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				228985EA206000D000F3B722 /* Tornaments.json in Resources */,
+				228985EF2062352800F3B722 /* DefaultPlayers.json in Resources */,
 				228985D4205E897600F3B722 /* LaunchScreen.storyboard in Resources */,
 				228985D1205E897600F3B722 /* Assets.xcassets in Resources */,
 				228985CF205E897600F3B722 /* Main.storyboard in Resources */,
@@ -170,6 +203,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		228985F5206242B000F3B722 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Realm.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		228985C2205E897600F3B722 /* Sources */ = {
@@ -180,8 +233,12 @@
 				228985DF205E956D00F3B722 /* MatchTableViewController.swift in Sources */,
 				228985E7205E9BC700F3B722 /* Tornament.swift in Sources */,
 				228985CC205E897600F3B722 /* ViewController.swift in Sources */,
+				228985F9206245F800F3B722 /* MyPlayer.swift in Sources */,
+				228985ED20622EAA00F3B722 /* Player.swift in Sources */,
 				228985CA205E897600F3B722 /* AppDelegate.swift in Sources */,
+				228985F72062456300F3B722 /* PlayerTableViewController.swift in Sources */,
 				228985E9205E9C5400F3B722 /* Match.swift in Sources */,
+				228985FB206251B300F3B722 /* JsonHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +377,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EQC88F8HW8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Basketball/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mxy.Basketball;
@@ -335,6 +396,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EQC88F8HW8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Basketball/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mxy.Basketball;
