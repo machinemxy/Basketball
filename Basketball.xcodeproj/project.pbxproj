@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		223380D12063F9A900437BB1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223380D02063F9A900437BB1 /* Player.swift */; };
 		228985CA205E897600F3B722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985C9205E897600F3B722 /* AppDelegate.swift */; };
 		228985CC205E897600F3B722 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985CB205E897600F3B722 /* ViewController.swift */; };
 		228985CF205E897600F3B722 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228985CD205E897600F3B722 /* Main.storyboard */; };
@@ -17,16 +18,16 @@
 		228985E7205E9BC700F3B722 /* Tornament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985E6205E9BC700F3B722 /* Tornament.swift */; };
 		228985E9205E9C5400F3B722 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985E8205E9C5400F3B722 /* Match.swift */; };
 		228985EA206000D000F3B722 /* Tornaments.json in Resources */ = {isa = PBXBuildFile; fileRef = 228985E4205E99E400F3B722 /* Tornaments.json */; };
-		228985ED20622EAA00F3B722 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985EC20622EAA00F3B722 /* Player.swift */; };
+		228985ED20622EAA00F3B722 /* PlayerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985EC20622EAA00F3B722 /* PlayerBase.swift */; };
 		228985EF2062352800F3B722 /* DefaultPlayers.json in Resources */ = {isa = PBXBuildFile; fileRef = 228985EE2062352800F3B722 /* DefaultPlayers.json */; };
 		228985F32062421C00F3B722 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228985F12062421C00F3B722 /* RealmSwift.framework */; };
 		228985F42062421C00F3B722 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228985F22062421C00F3B722 /* Realm.framework */; };
 		228985F72062456300F3B722 /* PlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985F62062456300F3B722 /* PlayerTableViewController.swift */; };
-		228985F9206245F800F3B722 /* MyPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985F8206245F800F3B722 /* MyPlayer.swift */; };
 		228985FB206251B300F3B722 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985FA206251B300F3B722 /* JsonHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		223380D02063F9A900437BB1 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		228985C6205E897600F3B722 /* Basketball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Basketball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		228985C9205E897600F3B722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		228985CB205E897600F3B722 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,12 +40,11 @@
 		228985E4205E99E400F3B722 /* Tornaments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Tornaments.json; sourceTree = "<group>"; };
 		228985E6205E9BC700F3B722 /* Tornament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tornament.swift; sourceTree = "<group>"; };
 		228985E8205E9C5400F3B722 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
-		228985EC20622EAA00F3B722 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		228985EC20622EAA00F3B722 /* PlayerBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerBase.swift; sourceTree = "<group>"; };
 		228985EE2062352800F3B722 /* DefaultPlayers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DefaultPlayers.json; sourceTree = "<group>"; };
 		228985F12062421C00F3B722 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		228985F22062421C00F3B722 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		228985F62062456300F3B722 /* PlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewController.swift; sourceTree = "<group>"; };
-		228985F8206245F800F3B722 /* MyPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlayer.swift; sourceTree = "<group>"; };
 		228985FA206251B300F3B722 /* JsonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,8 +110,8 @@
 			children = (
 				228985E6205E9BC700F3B722 /* Tornament.swift */,
 				228985E8205E9C5400F3B722 /* Match.swift */,
-				228985EC20622EAA00F3B722 /* Player.swift */,
-				228985F8206245F800F3B722 /* MyPlayer.swift */,
+				228985EC20622EAA00F3B722 /* PlayerBase.swift */,
+				223380D02063F9A900437BB1 /* Player.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,11 +233,11 @@
 				228985DF205E956D00F3B722 /* MatchTableViewController.swift in Sources */,
 				228985E7205E9BC700F3B722 /* Tornament.swift in Sources */,
 				228985CC205E897600F3B722 /* ViewController.swift in Sources */,
-				228985F9206245F800F3B722 /* MyPlayer.swift in Sources */,
-				228985ED20622EAA00F3B722 /* Player.swift in Sources */,
+				228985ED20622EAA00F3B722 /* PlayerBase.swift in Sources */,
 				228985CA205E897600F3B722 /* AppDelegate.swift in Sources */,
 				228985F72062456300F3B722 /* PlayerTableViewController.swift in Sources */,
 				228985E9205E9C5400F3B722 /* Match.swift in Sources */,
+				223380D12063F9A900437BB1 /* Player.swift in Sources */,
 				228985FB206251B300F3B722 /* JsonHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

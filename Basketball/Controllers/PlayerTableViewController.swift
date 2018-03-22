@@ -12,12 +12,12 @@ import RealmSwift
 
 class PlayerTableViewController: UITableViewController {
 	let realm = try! Realm()
-	var myPlayers: Results<MyPlayer>?
+	var myPlayers: Results<Player>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-		if realm.objects(MyPlayer.self).count == 0 {
+		if realm.objects(Player.self).count == 0 {
 			generateDefaultPlayers()
 		}
     }
@@ -25,7 +25,7 @@ class PlayerTableViewController: UITableViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
-		myPlayers = realm.objects(MyPlayer.self)
+		myPlayers = realm.objects(Player.self)
 		tableView.reloadData()
 	}
 
@@ -53,6 +53,7 @@ class PlayerTableViewController: UITableViewController {
 
 		if let tempMyPlayers = self.myPlayers {
 			cell.textLabel?.text = tempMyPlayers[indexPath.row].name
+			cell.detailTextLabel?.text = "Overall: \(tempMyPlayers[indexPath.row].overall)"
 		}
 
         return cell
@@ -103,15 +104,16 @@ class PlayerTableViewController: UITableViewController {
     }
     */
 	private func generateDefaultPlayers() {
-		let generatedMyPlayers: [MyPlayer] = JsonHelper.parse(jsonFileName: "DefaultPlayers")
+		let generatedPlayers: [Player] = JsonHelper.parse(jsonFileName: "DefaultPlayers")
 		
-		for generatedMyPlayer in generatedMyPlayers {
-			generatedMyPlayer.lv = 1
-			generatedMyPlayer.exp = 50
+		for generatedPlayer in generatedPlayers {
+			generatedPlayer.exp = 50
+			generatedPlayer.isMyPlayer = true
+			generatedPlayer.autoSetAbilities()
 		}
 		
 		try! realm.write {
-			realm.add(generatedMyPlayers)
+			realm.add(generatedPlayers)
 		}
 	}
 }
