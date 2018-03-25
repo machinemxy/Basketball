@@ -18,9 +18,9 @@ class PlayerBase: Object, Codable {
 	@objc dynamic var strBase = 0
 	@objc dynamic var offBase = 0
 	@objc dynamic var defBase = 0
-	@objc dynamic var playMakingBase = 0
-	@objc dynamic var stealBase = 0
-	@objc dynamic var reboundBase = 0
+	@objc dynamic var plmBase = 0
+	@objc dynamic var stlBase = 0
+	@objc dynamic var rebBase = 0
 	@objc dynamic var role = 0
 	@objc dynamic var willShoot = false
 	@objc dynamic var willBreakthrough = false

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		223380D12063F9A900437BB1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223380D02063F9A900437BB1 /* Player.swift */; };
+		223380D320674CBB00437BB1 /* PlayerDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223380D220674CBB00437BB1 /* PlayerDetialViewController.swift */; };
 		228985CA205E897600F3B722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985C9205E897600F3B722 /* AppDelegate.swift */; };
 		228985CC205E897600F3B722 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985CB205E897600F3B722 /* ViewController.swift */; };
 		228985CF205E897600F3B722 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228985CD205E897600F3B722 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		223380D02063F9A900437BB1 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		223380D220674CBB00437BB1 /* PlayerDetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetialViewController.swift; sourceTree = "<group>"; };
 		228985C6205E897600F3B722 /* Basketball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Basketball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		228985C9205E897600F3B722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		228985CB205E897600F3B722 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				228985CB205E897600F3B722 /* ViewController.swift */,
 				228985DE205E956D00F3B722 /* MatchTableViewController.swift */,
 				228985F62062456300F3B722 /* PlayerTableViewController.swift */,
+				223380D220674CBB00437BB1 /* PlayerDetialViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				228985ED20622EAA00F3B722 /* PlayerBase.swift in Sources */,
 				228985CA205E897600F3B722 /* AppDelegate.swift in Sources */,
 				228985F72062456300F3B722 /* PlayerTableViewController.swift in Sources */,
+				223380D320674CBB00437BB1 /* PlayerDetialViewController.swift in Sources */,
 				228985E9205E9C5400F3B722 /* Match.swift in Sources */,
 				223380D12063F9A900437BB1 /* Player.swift in Sources */,
 				228985FB206251B300F3B722 /* JsonHelper.swift in Sources */,

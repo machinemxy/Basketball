@@ -18,13 +18,13 @@ class Player: PlayerBase {
 	@objc dynamic var str = 0
 	@objc dynamic var off = 0
 	@objc dynamic var def = 0
-	@objc dynamic var playMaking = 0
-	@objc dynamic var steal = 0
-	@objc dynamic var rebound = 0
+	@objc dynamic var plm = 0
+	@objc dynamic var stl = 0
+	@objc dynamic var reb = 0
 
 	var overall: Int {
 		get {
-			return pos + spd + str + off + def + playMaking + steal + rebound
+			return pos + spd + str + off + def + plm + stl + reb
 		}
 	}
 
@@ -35,8 +35,8 @@ class Player: PlayerBase {
 		str = strBase * multiplier
 		off = offBase * multiplier
 		def = defBase * multiplier
-		playMaking = playMakingBase * multiplier
-		steal = stealBase * multiplier
-		rebound = reboundBase * multiplier
+		plm = plmBase * multiplier
+		stl = stlBase * multiplier
+		reb = rebBase * multiplier
 	}
 }

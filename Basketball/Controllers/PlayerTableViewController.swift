@@ -52,13 +52,27 @@ class PlayerTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell", for: indexPath)
 
 		if let tempMyPlayers = self.myPlayers {
-			cell.textLabel?.text = tempMyPlayers[indexPath.row].name
-			cell.detailTextLabel?.text = "Overall: \(tempMyPlayers[indexPath.row].overall)"
+			let tempMyPlayer = tempMyPlayers[indexPath.row]
+			cell.textLabel?.text = tempMyPlayer.name
+			let detail = NSLocalizedString("LV: ", comment: "") + "\(tempMyPlayer.lv)" + NSLocalizedString("  Overall: ", comment: "") + "\(tempMyPlayer.overall)"
+			cell.detailTextLabel?.text = detail
 		}
 
         return cell
     }
 
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		super.prepare(for: segue, sender: sender)
+		
+		if segue.identifier == "showPlayerDetail" {
+			//do something
+		}
+	}
+	
+	@IBAction func unwindToPlayerTableView(segue: UIStoryboardSegue) {
+		
+	}
+	
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
