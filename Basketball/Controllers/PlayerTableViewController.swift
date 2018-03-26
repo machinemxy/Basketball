@@ -11,12 +11,12 @@ import Realm
 import RealmSwift
 
 class PlayerTableViewController: UITableViewController {
-	let realm = try! Realm()
 	var myPlayers: Results<Player>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		let realm = try! Realm()
 		if realm.objects(Player.self).count == 0 {
 			generateDefaultPlayers()
 		}
@@ -25,17 +25,12 @@ class PlayerTableViewController: UITableViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
+		let realm = try! Realm()
 		myPlayers = realm.objects(Player.self)
 		tableView.reloadData()
 	}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -51,10 +46,9 @@ class PlayerTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell", for: indexPath)
 
-		if let tempMyPlayers = self.myPlayers {
-			let tempMyPlayer = tempMyPlayers[indexPath.row]
-			cell.textLabel?.text = tempMyPlayer.name
-			let detail = NSLocalizedString("LV: ", comment: "") + "\(tempMyPlayer.lv)" + NSLocalizedString("  Overall: ", comment: "") + "\(tempMyPlayer.overall)"
+		if let myPlayer = myPlayers?[indexPath.row] {
+			cell.textLabel?.text = myPlayer.localizedName
+			let detail = NSLocalizedString("LV: ", comment: "") + "\(myPlayer.lv)" + NSLocalizedString("  Overall: ", comment: "") + "\(myPlayer.overall)"
 			cell.detailTextLabel?.text = detail
 		}
 
@@ -65,7 +59,10 @@ class PlayerTableViewController: UITableViewController {
 		super.prepare(for: segue, sender: sender)
 		
 		if segue.identifier == "showPlayerDetail" {
-			//do something
+			let indexPath = tableView.indexPathForSelectedRow!
+			let selectedPlayer = myPlayers![indexPath.row]
+			let playerDetailViewController = segue.destination as! PlayerDetialViewController
+			playerDetailViewController.player = selectedPlayer
 		}
 	}
 	
@@ -108,15 +105,6 @@ class PlayerTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 	private func generateDefaultPlayers() {
 		let generatedPlayers: [Player] = JsonHelper.parse(jsonFileName: "DefaultPlayers")
 		
@@ -126,6 +114,7 @@ class PlayerTableViewController: UITableViewController {
 			generatedPlayer.autoSetAbilities()
 		}
 		
+		let realm = try! Realm()
 		try! realm.write {
 			realm.add(generatedPlayers)
 		}

@@ -171,7 +171,7 @@
                                     <segue destination="97W-sl-Xpd" kind="unwind" unwindAction="unwindToPlayerTableViewWithSegue:" id="gte-17-3gf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7z-Ek-yOd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7z-Ek-yOd">
                                 <rect key="frame" x="0.0" y="460" width="320" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="6c6-tE-Bww"/>
@@ -352,6 +352,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FEl-4o-Hrv"/>
                     </view>
+                    <connections>
+                        <outlet property="lblDef" destination="dyb-TZ-cEV" id="owz-zt-rZD"/>
+                        <outlet property="lblEXP" destination="83F-K3-zY4" id="Qg6-Cw-8lF"/>
+                        <outlet property="lblLV" destination="4Ga-YL-Xh3" id="bGR-sq-ArL"/>
+                        <outlet property="lblName" destination="TDA-vI-jK5" id="dtC-I1-c7e"/>
+                        <outlet property="lblOff" destination="CuB-do-JqK" id="Tlm-yp-mFW"/>
+                        <outlet property="lblPlm" destination="mya-1c-m37" id="I7w-Mo-tz5"/>
+                        <outlet property="lblPos" destination="IOU-nt-gjT" id="8Ty-4K-Fwv"/>
+                        <outlet property="lblReb" destination="0qm-iT-Qve" id="1uZ-bT-z65"/>
+                        <outlet property="lblSpd" destination="Bc4-Ib-tF5" id="MXD-fi-CAt"/>
+                        <outlet property="lblStl" destination="KfU-Tb-con" id="ux2-rN-FaO"/>
+                        <outlet property="lblStr" destination="Nks-f5-Xwd" id="AJG-pY-EBx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sdm-2b-AWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="97W-sl-Xpd" userLabel="Exit" sceneMemberID="exit"/>

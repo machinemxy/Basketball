@@ -9,27 +9,42 @@
 import UIKit
 
 class PlayerDetialViewController: UIViewController {
-
+	var player = Player()
+	
+	@IBOutlet weak var lblName: UILabel!
+	@IBOutlet weak var lblLV: UILabel!
+	@IBOutlet weak var lblEXP: UILabel!
+	@IBOutlet weak var lblPos: UILabel!
+	@IBOutlet weak var lblSpd: UILabel!
+	@IBOutlet weak var lblStr: UILabel!
+	@IBOutlet weak var lblOff: UILabel!
+	@IBOutlet weak var lblDef: UILabel!
+	@IBOutlet weak var lblPlm: UILabel!
+	@IBOutlet weak var lblStl: UILabel!
+	@IBOutlet weak var lblReb: UILabel!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setView()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
-
+	
+	private func setView() {
+		lblName.text = player.localizedName
+		lblLV.text = NSLocalizedString("LV: ", comment: "") + "\(player.lv)"
+		lblEXP.text = NSLocalizedString("EXP: ", comment: "") + "\(player.exp)/100"
+		lblPos.text = "\(player.pos)"
+		lblSpd.text = "\(player.spd)"
+		lblStr.text = "\(player.str)"
+		lblOff.text = "\(player.off)"
+		lblDef.text = "\(player.def)"
+		lblPlm.text = "\(player.plm)"
+		lblStl.text = "\(player.stl)"
+		lblReb.text = "\(player.reb)"
+	}
 }

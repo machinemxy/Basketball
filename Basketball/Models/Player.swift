@@ -27,6 +27,12 @@ class Player: PlayerBase {
 			return pos + spd + str + off + def + plm + stl + reb
 		}
 	}
+	
+	var localizedName: String {
+		get {
+			return NSLocalizedString(self.name, comment: "")
+		}
+	}
 
 	func autoSetAbilities() {
 		let multiplier = lv + 9
