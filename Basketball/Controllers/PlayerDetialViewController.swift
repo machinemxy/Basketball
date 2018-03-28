@@ -22,6 +22,7 @@ class PlayerDetialViewController: UIViewController {
 	@IBOutlet weak var lblPlm: UILabel!
 	@IBOutlet weak var lblStl: UILabel!
 	@IBOutlet weak var lblReb: UILabel!
+	@IBOutlet weak var imgPortrait: UIImageView!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,5 +47,8 @@ class PlayerDetialViewController: UIViewController {
 		lblPlm.text = "\(player.plm)"
 		lblStl.text = "\(player.stl)"
 		lblReb.text = "\(player.reb)"
+		if player.portrait != "" {
+			imgPortrait.image = UIImage(named: player.portrait)
+		}
 	}
 }

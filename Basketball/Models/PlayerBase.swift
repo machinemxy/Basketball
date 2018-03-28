@@ -12,6 +12,7 @@ import RealmSwift
 
 class PlayerBase: Object, Codable {
 	@objc dynamic var name = ""
+	@objc dynamic var portrait = ""
 	@objc dynamic var lv = 1
 	@objc dynamic var posBase = 0
 	@objc dynamic var spdBase = 0

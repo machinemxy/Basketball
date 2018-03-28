@@ -1,6 +1,7 @@
 [
   {
     "name":"Mabuchi",
+    "portrait":"mabuchi",
     "lv":1,
     "posBase":9,
     "spdBase":6,
@@ -18,7 +19,8 @@
   },
   {
     "name":"Furuya",
- 	"lv":1,
+    "portrait":"",
+ 	  "lv":1,
     "posBase":4,
     "spdBase":8,
     "strBase":6,
@@ -35,6 +37,7 @@
   },
   {
     "name":"Kobayashi",
+    "portrait":"",
     "lv":1,
     "posBase":7,
     "spdBase":7,
@@ -52,7 +55,8 @@
   },
   {
     "name":"Kano",
-	"lv":1,
+    "portrait":"",
+	  "lv":1,
     "posBase":5,
     "spdBase":6,
     "strBase":8,
@@ -69,7 +73,8 @@
   },
   {
     "name":"Tsuyoko",
-	"lv":1,
+    "portrait":"",
+	  "lv":1,
     "posBase":8,
     "spdBase":4,
     "strBase":8,
@@ -86,7 +91,8 @@
   },
   {
     "name":"Narita",
-	"lv":1,
+    "portrait":"",
+  	"lv":1,
     "posBase":6,
     "spdBase":6,
     "strBase":6,
