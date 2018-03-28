@@ -33,6 +33,25 @@ class Player: PlayerBase {
 			return NSLocalizedString(self.name, comment: "")
 		}
 	}
+	
+	var roleName: String {
+		get {
+			switch self.role {
+			case 1:
+				return "PG"
+			case 2:
+				return "SG"
+			case 3:
+				return "SF"
+			case 4:
+				return "PF"
+			case 5:
+				return "C"
+			default:
+				return "None"
+			}
+		}
+	}
 
 	func autoSetAbilities() {
 		let multiplier = lv + 9

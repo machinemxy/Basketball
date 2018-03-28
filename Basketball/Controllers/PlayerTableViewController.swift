@@ -50,7 +50,9 @@ class PlayerTableViewController: UITableViewController {
 			cell.textLabel?.text = myPlayer.localizedName
 			let detail = NSLocalizedString("LV: ", comment: "") + "\(myPlayer.lv)" + NSLocalizedString("  Overall: ", comment: "") + "\(myPlayer.overall)"
 			cell.detailTextLabel?.text = detail
-			cell.imageView?.image = #imageLiteral(resourceName: "basketball")
+			if myPlayer.role > 0 {
+				cell.imageView?.image = UIImage(named: myPlayer.roleName)
+			}
 		}
 
         return cell
