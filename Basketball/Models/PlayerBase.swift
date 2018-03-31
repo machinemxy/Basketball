@@ -11,9 +11,9 @@ import Realm
 import RealmSwift
 
 class PlayerBase: Object, Codable {
+	@objc dynamic var id = 0
 	@objc dynamic var name = ""
 	@objc dynamic var portrait = ""
-	@objc dynamic var lv = 1
 	@objc dynamic var posBase = 0
 	@objc dynamic var spdBase = 0
 	@objc dynamic var strBase = 0
@@ -22,9 +22,11 @@ class PlayerBase: Object, Codable {
 	@objc dynamic var plmBase = 0
 	@objc dynamic var stlBase = 0
 	@objc dynamic var rebBase = 0
-	@objc dynamic var role = 0
 	@objc dynamic var willShoot = false
 	@objc dynamic var willBreakthrough = false
 	@objc dynamic var willInsideScoring = false
-	@objc dynamic var traits = ""
+	
+	override static func primaryKey() -> String? {
+		return "id"
+	}
 }

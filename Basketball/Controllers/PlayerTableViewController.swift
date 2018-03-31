@@ -16,17 +16,16 @@ class PlayerTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-		let realm = try! Realm()
-		if realm.objects(Player.self).count == 0 {
-			generateDefaultPlayers()
-		}
     }
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
+		let playerSortor = [SortDescriptor(keyPath: "role", ascending: false),
+							SortDescriptor(keyPath: "lv", ascending: false)]
+		
 		let realm = try! Realm()
-		myPlayers = realm.objects(Player.self)
+		myPlayers = realm.objects(Player.self).sorted(by: playerSortor)
 		tableView.reloadData()
 	}
 
@@ -106,20 +105,5 @@ class PlayerTableViewController: UITableViewController {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-    */
-
-	private func generateDefaultPlayers() {
-		let generatedPlayers: [Player] = JsonHelper.parse(jsonFileName: "DefaultPlayers")
-		
-		for generatedPlayer in generatedPlayers {
-			generatedPlayer.exp = 50
-			generatedPlayer.isMyPlayer = true
-			generatedPlayer.autoSetAbilities()
-		}
-		
-		let realm = try! Realm()
-		try! realm.write {
-			realm.add(generatedPlayers)
-		}
-	}
+    */	
 }

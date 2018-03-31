@@ -9,6 +9,7 @@
 import Foundation
 
 struct DefaultKey {
-	static let TORNAMENT = "tornament"
-	static let MATCH = "match"
+	static let DB_VERSION = "DB_VERSION" //current 1
+	static let TORNAMENT = "TORNAMENT"
+	static let MATCH = "MATCH"
 }
