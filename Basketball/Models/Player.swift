@@ -41,6 +41,10 @@ class Player: Object {
 		return "id"
 	}
 	
+	override static func indexedProperties() -> [String] {
+		return ["role"]
+	}
+	
 	static func generate(baseOn base: PlayerBase) -> Player {
 		let player = Player()
 		player.id = base.id

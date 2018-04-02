@@ -15,19 +15,9 @@ class PlayerTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		
+		fetchMyPlayers()
     }
-	
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
-		
-		let playerSortor = [SortDescriptor(keyPath: "role", ascending: false),
-							SortDescriptor(keyPath: "lv", ascending: false)]
-		
-		let realm = try! Realm()
-		myPlayers = realm.objects(Player.self).sorted(by: playerSortor)
-		tableView.reloadData()
-	}
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -51,6 +41,8 @@ class PlayerTableViewController: UITableViewController {
 			cell.detailTextLabel?.text = detail
 			if myPlayer.role > 0 {
 				cell.imageView?.image = UIImage(named: myPlayer.roleName)
+			} else {
+				cell.imageView?.image = nil
 			}
 		}
 
@@ -69,7 +61,16 @@ class PlayerTableViewController: UITableViewController {
 	}
 	
 	@IBAction func unwindToPlayerTableView(segue: UIStoryboardSegue) {
+		fetchMyPlayers()
+		tableView.reloadData()
+	}
+	
+	private func fetchMyPlayers() {
+		let playerSortor = [SortDescriptor(keyPath: "role", ascending: false),
+							SortDescriptor(keyPath: "lv", ascending: false)]
 		
+		let realm = try! Realm()
+		myPlayers = realm.objects(Player.self).sorted(by: playerSortor)
 	}
 	
     /*

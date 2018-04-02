@@ -31,7 +31,7 @@ class PlayerDetialViewController: UIViewController {
 	@IBOutlet weak var btnCurrentRole: UIButton!
 	
 	@IBAction func changeRole(_ sender: Any) {
-		//working...
+		showRoleActionSheet()
 	}
 	
     override func viewDidLoad() {
@@ -74,8 +74,61 @@ class PlayerDetialViewController: UIViewController {
 	private func showRoleActionSheet() {
 		let roleActionSheet = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
 		
+		let cAction = UIAlertAction(title: "C", style: .default) { (_) in
+			self.performRoleChanging(role: 5)
+		}
+		roleActionSheet.addAction(cAction)
+		
+		let pfAction = UIAlertAction(title: "PF", style: .default) { (_) in
+			self.performRoleChanging(role: 4)
+		}
+		roleActionSheet.addAction(pfAction)
+		
+		let sfAction = UIAlertAction(title: "SF", style: .default) { (_) in
+			self.performRoleChanging(role: 3)
+		}
+		roleActionSheet.addAction(sfAction)
+		
+		let sgAction = UIAlertAction(title: "SG", style: .default) { (_) in
+			self.performRoleChanging(role: 2)
+		}
+		roleActionSheet.addAction(sgAction)
+		
+		let pgAction = UIAlertAction(title: "PG", style: .default) { (_) in
+			self.performRoleChanging(role: 1)
+		}
+		roleActionSheet.addAction(pgAction)
+		
+		let noneAction = UIAlertAction(title: "None", style: .default) { (_) in
+			self.performRoleChanging(role: 0)
+		}
+		roleActionSheet.addAction(noneAction)
+		
+		let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
+		roleActionSheet.addAction(cancelAction)
+		
+		self.present(roleActionSheet, animated: true, completion: nil)
 	}
 	
+	private func performRoleChanging(role: Int) {
+		let realm = try! Realm()
+		try! realm.write {
+			//change the role of current player in that role to none
+			if role != 0 {
+				if let currentRolePlayer = realm.objects(Player.self).filter("role = \(role)").first {
+					currentRolePlayer.role = 0
+				}
+			}
+			
+			//assign the player to play in that role
+			player.role = role
+		}
+		
+		//refresh the role
+		btnCurrentRole.setTitle("\(player.roleName)", for: .normal)
+	}
+	
+	//参考
 	func showSimpleDialog(title: String) {
 		let alertController = UIAlertController(title: title, message: "", preferredStyle: .alert)
 		let alertAction = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: nil)

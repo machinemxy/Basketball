@@ -18,7 +18,7 @@
   {
     "id":2,
     "name":"Furuya",
-    "portrait":"",
+    "portrait":"furuya",
     "posBase":4,
     "spdBase":8,
     "strBase":6,
@@ -34,7 +34,7 @@
   {
     "id":3,
     "name":"Kobayashi",
-    "portrait":"",
+    "portrait":"kobayashi",
     "posBase":7,
     "spdBase":7,
     "strBase":7,
@@ -50,7 +50,7 @@
   {
     "id":4,
     "name":"Kano",
-    "portrait":"",
+    "portrait":"kano",
     "posBase":5,
     "spdBase":6,
     "strBase":8,
@@ -66,7 +66,7 @@
   {
     "id":5,
     "name":"Tsuyoko",
-    "portrait":"",
+    "portrait":"tsuyoko",
     "posBase":8,
     "spdBase":4,
     "strBase":8,
@@ -82,7 +82,7 @@
   {
     "id":6,
     "name":"Narita",
-    "portrait":"",
+    "portrait":"narita",
     "posBase":6,
     "spdBase":6,
     "strBase":6,
