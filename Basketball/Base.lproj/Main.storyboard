@@ -224,6 +224,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="POS"/>
+                                                <connections>
+                                                    <action selector="btnPosClicked:" destination="yvT-I5-xSC" eventType="touchUpInside" id="hNE-jm-btT"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOU-nt-gjT">
                                                 <rect key="frame" x="80" y="0.0" width="80" height="44"/>
@@ -360,7 +363,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qT-xl-j8N">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="Tendencies"/>
+                                                <state key="normal" title="Tendency"/>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fks-E1-Mg2">
                                                 <rect key="frame" x="80" y="0.0" width="80" height="44"/>
@@ -432,6 +435,7 @@
                         <outlet property="imgPortrait" destination="Gix-rB-Ej8" id="WKO-A1-DBd"/>
                         <outlet property="lblDef" destination="dyb-TZ-cEV" id="owz-zt-rZD"/>
                         <outlet property="lblEXP" destination="83F-K3-zY4" id="Qg6-Cw-8lF"/>
+                        <outlet property="lblInfo" destination="A7z-Ek-yOd" id="ftt-hb-1f4"/>
                         <outlet property="lblLV" destination="4Ga-YL-Xh3" id="bGR-sq-ArL"/>
                         <outlet property="lblName" destination="TDA-vI-jK5" id="dtC-I1-c7e"/>
                         <outlet property="lblOff" destination="CuB-do-JqK" id="Tlm-yp-mFW"/>

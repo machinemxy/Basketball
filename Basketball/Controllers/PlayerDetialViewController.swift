@@ -29,9 +29,14 @@ class PlayerDetialViewController: UIViewController {
 	@IBOutlet weak var swBreak: UISwitch!
 	@IBOutlet weak var swInside: UISwitch!
 	@IBOutlet weak var btnCurrentRole: UIButton!
+	@IBOutlet weak var lblInfo: UILabel!
 	
 	@IBAction func changeRole(_ sender: Any) {
 		showRoleActionSheet()
+	}
+	
+	@IBAction func btnPosClicked(_ sender: Any) {
+		lblInfo.text = NSLocalizedString("Player's position awareness. Affect the offense and defence of shooting.", comment: "")
 	}
 	
     override func viewDidLoad() {
@@ -72,7 +77,7 @@ class PlayerDetialViewController: UIViewController {
 	}
 	
 	private func showRoleActionSheet() {
-		let roleActionSheet = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
+		let roleActionSheet = UIAlertController(title: NSLocalizedString("Please choose", comment: ""), message: "", preferredStyle: .actionSheet)
 		
 		let cAction = UIAlertAction(title: "C", style: .default) { (_) in
 			self.performRoleChanging(role: 5)
@@ -126,13 +131,5 @@ class PlayerDetialViewController: UIViewController {
 		
 		//refresh the role
 		btnCurrentRole.setTitle("\(player.roleName)", for: .normal)
-	}
-	
-	//参考
-	func showSimpleDialog(title: String) {
-		let alertController = UIAlertController(title: title, message: "", preferredStyle: .alert)
-		let alertAction = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: nil)
-		alertController.addAction(alertAction)
-		self.present(alertController, animated: true, completion: nil)
 	}
 }
