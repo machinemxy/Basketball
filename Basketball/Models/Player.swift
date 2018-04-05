@@ -88,7 +88,7 @@ class Player: Object {
 		case 5:
 			return "C"
 		default:
-			return "None"
+			return "-"
 		}
 	}
 
