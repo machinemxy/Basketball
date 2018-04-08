@@ -36,7 +36,7 @@ class PlayerTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell", for: indexPath)
 
 		if let myPlayer = myPlayers?[indexPath.row] {
-			cell.textLabel?.text = myPlayer.localizedName
+			cell.textLabel?.text = myPlayer.name
 			let detail = NSLocalizedString("LV: ", comment: "") + "\(myPlayer.lv)" + NSLocalizedString("  Overall: ", comment: "") + "\(myPlayer.overall)"
 			cell.detailTextLabel?.text = detail
 			if myPlayer.role > 0 {

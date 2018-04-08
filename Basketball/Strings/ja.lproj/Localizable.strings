@@ -5,10 +5,8 @@
   Created by 马学渊 on 2018/04/05.
   Copyright © 2018年 Ma Xueyuan. All rights reserved.
 */
-//players
-"Mabuchi" = "馬淵　学";
-"Furuya" = "古屋　真太郎";
-"Kobayashi" = "小林　明";
-"Kano" = "叶　庭偉";
-"Tsuyoko" = "柳原　強子";
-"Narita" = "成田　玉山";
+//match subtitle
+"1st Match"="第１戦";
+"2nd Match"="第２戦";
+"Semifinal"="準決勝";
+"Final"="決勝";

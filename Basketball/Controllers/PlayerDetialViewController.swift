@@ -59,7 +59,7 @@ class PlayerDetialViewController: UIViewController {
 		if player.portrait != "" {
 			imgPortrait.image = UIImage(named: player.portrait)
 		}
-		lblName.text = player.localizedName
+		lblName.text = player.name
 		lblLV.text = NSLocalizedString("LV: ", comment: "") + "\(player.lv)"
 		lblEXP.text = NSLocalizedString("EXP: ", comment: "") + "\(player.exp)/100"
 		lblPos.text = "\(player.pos)"

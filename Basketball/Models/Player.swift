@@ -12,7 +12,9 @@ import RealmSwift
 
 class Player: Object {
 	@objc dynamic var id = 0
-	@objc dynamic var name = ""
+	@objc dynamic var nameEn = ""
+	@objc dynamic var nameJa = ""
+	@objc dynamic var nameZh = ""
 	@objc dynamic var portrait = ""
 	@objc dynamic var posBase = 0
 	@objc dynamic var spdBase = 0
@@ -48,7 +50,9 @@ class Player: Object {
 	static func generate(baseOn base: PlayerBase) -> Player {
 		let player = Player()
 		player.id = base.id
-		player.name = base.name
+		player.nameEn = base.nameEn
+		player.nameJa = base.nameJa
+		player.nameZh = base.nameZh
 		player.portrait = base.portrait
 		player.posBase = base.posBase
 		player.spdBase = base.spdBase
@@ -71,8 +75,19 @@ class Player: Object {
 		return pos + spd + str + off + def + plm + stl + reb
 	}
 	
-	var localizedName: String {
-		return NSLocalizedString(self.name, comment: "")
+	var name: String {
+		guard let language = NSLocale.current.languageCode else {
+			return nameEn
+		}
+		
+		switch language {
+		case "ja":
+			return nameJa
+		case "zh":
+			return nameZh
+		default:
+			return nameEn
+		}
 	}
 	
 	var roleName: String {

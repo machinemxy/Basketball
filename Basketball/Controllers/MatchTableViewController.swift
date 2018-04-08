@@ -45,7 +45,7 @@ class MatchTableViewController: UITableViewController {
 
         // Configure the cell...
 		cell.textLabel?.text = tornaments[indexPath.section].matches[indexPath.row].name
-		cell.detailTextLabel?.text = tornaments[indexPath.section].matches[indexPath.row].subtitle
+		cell.detailTextLabel?.text = tornaments[indexPath.section].matches[indexPath.row].localizedSubtitle
 
         return cell
     }

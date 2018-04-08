@@ -1,7 +1,9 @@
 [
   {
     "id":1,
-    "name":"Mabuchi",
+    "nameEn":"Mabuchi",
+    "nameJa":"馬淵　学",
+    "nameZh":"马渊　学",
     "portrait":"mabuchi",
     "posBase":9,
     "spdBase":6,
@@ -17,7 +19,9 @@
   },
   {
     "id":2,
-    "name":"Furuya",
+    "nameEn":"Furuya",
+    "nameJa":"古屋　真太郎",
+    "nameZh":"古屋　真太郎",
     "portrait":"furuya",
     "posBase":4,
     "spdBase":8,
@@ -33,7 +37,9 @@
   },
   {
     "id":3,
-    "name":"Kobayashi",
+    "nameEn":"Kobayashi",
+    "nameJa":"小林　明",
+    "nameZh":"小林　明",
     "portrait":"kobayashi",
     "posBase":7,
     "spdBase":7,
@@ -49,7 +55,9 @@
   },
   {
     "id":4,
-    "name":"Kano",
+    "nameEn":"Kano",
+    "nameJa":"叶　庭偉",
+    "nameZh":"叶　庭伟",
     "portrait":"kano",
     "posBase":5,
     "spdBase":6,
@@ -65,7 +73,9 @@
   },
   {
     "id":5,
-    "name":"Tsuyoko",
+    "nameEn":"Tsuyoko",
+    "nameJa":"柳原　強子",
+    "nameZh":"柳原　强子",
     "portrait":"tsuyoko",
     "posBase":8,
     "spdBase":4,
@@ -81,7 +91,9 @@
   },
   {
     "id":6,
-    "name":"Narita",
+    "nameEn":"Narita",
+    "nameJa":"成田　玉山",
+    "nameZh":"成田　玉山",
     "portrait":"narita",
     "posBase":6,
     "spdBase":6,
