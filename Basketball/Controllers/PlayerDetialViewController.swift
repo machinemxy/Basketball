@@ -16,7 +16,7 @@ class PlayerDetialViewController: UIViewController {
 	@IBOutlet weak var lblName: UILabel!
 	@IBOutlet weak var lblLV: UILabel!
 	@IBOutlet weak var lblEXP: UILabel!
-	@IBOutlet weak var lblPos: UILabel!
+	@IBOutlet weak var lblItl: UILabel!
 	@IBOutlet weak var lblSpd: UILabel!
 	@IBOutlet weak var lblStr: UILabel!
 	@IBOutlet weak var lblOff: UILabel!
@@ -28,15 +28,11 @@ class PlayerDetialViewController: UIViewController {
 	@IBOutlet weak var swShoot: UISwitch!
 	@IBOutlet weak var swBreak: UISwitch!
 	@IBOutlet weak var swInside: UISwitch!
-	@IBOutlet weak var btnCurrentRole: UIButton!
+	@IBOutlet weak var btnCurrentPos: UIButton!
 	@IBOutlet weak var lblInfo: UILabel!
 	
-	@IBAction func changeRole(_ sender: Any) {
-		showRoleActionSheet()
-	}
-	
-	@IBAction func btnPosClicked(_ sender: Any) {
-		lblInfo.text = NSLocalizedString("Player's position awareness. Affect the offense and defence of shooting.", comment: "")
+	@IBAction func changePos(_ sender: Any) {
+		showPosActionSheet()
 	}
 	
     override func viewDidLoad() {
@@ -60,9 +56,9 @@ class PlayerDetialViewController: UIViewController {
 			imgPortrait.image = UIImage(named: player.portrait)
 		}
 		lblName.text = player.name
-		lblLV.text = NSLocalizedString("LV: ", comment: "") + "\(player.lv)"
-		lblEXP.text = NSLocalizedString("EXP: ", comment: "") + "\(player.exp)/100"
-		lblPos.text = "\(player.pos)"
+		lblLV.text = "LV: \(player.lv)"
+		lblEXP.text = "EXP: \(player.exp)/100"
+		lblItl.text = "\(player.itl)"
 		lblSpd.text = "\(player.spd)"
 		lblStr.text = "\(player.str)"
 		lblOff.text = "\(player.off)"
@@ -70,66 +66,66 @@ class PlayerDetialViewController: UIViewController {
 		lblPlm.text = "\(player.plm)"
 		lblStl.text = "\(player.stl)"
 		lblReb.text = "\(player.reb)"
-		btnCurrentRole.setTitle(player.roleName, for: .normal)
+		btnCurrentPos.setTitle(player.posName, for: .normal)
 		swShoot.isOn = player.willShoot
 		swBreak.isOn = player.willBreakthrough
 		swInside.isOn = player.willInsideScoring
 	}
 	
-	private func showRoleActionSheet() {
-		let roleActionSheet = UIAlertController(title: NSLocalizedString("Please choose", comment: ""), message: "", preferredStyle: .actionSheet)
+	private func showPosActionSheet() {
+		let posActionSheet = UIAlertController(title: NSLocalizedString("Please choose", comment: ""), message: "", preferredStyle: .actionSheet)
 		
 		let cAction = UIAlertAction(title: "C", style: .default) { (_) in
-			self.performRoleChanging(role: 5)
+			self.performPosChanging(pos: 5)
 		}
-		roleActionSheet.addAction(cAction)
+		posActionSheet.addAction(cAction)
 		
 		let pfAction = UIAlertAction(title: "PF", style: .default) { (_) in
-			self.performRoleChanging(role: 4)
+			self.performPosChanging(pos: 4)
 		}
-		roleActionSheet.addAction(pfAction)
+		posActionSheet.addAction(pfAction)
 		
 		let sfAction = UIAlertAction(title: "SF", style: .default) { (_) in
-			self.performRoleChanging(role: 3)
+			self.performPosChanging(pos: 3)
 		}
-		roleActionSheet.addAction(sfAction)
+		posActionSheet.addAction(sfAction)
 		
 		let sgAction = UIAlertAction(title: "SG", style: .default) { (_) in
-			self.performRoleChanging(role: 2)
+			self.performPosChanging(pos: 2)
 		}
-		roleActionSheet.addAction(sgAction)
+		posActionSheet.addAction(sgAction)
 		
 		let pgAction = UIAlertAction(title: "PG", style: .default) { (_) in
-			self.performRoleChanging(role: 1)
+			self.performPosChanging(pos: 1)
 		}
-		roleActionSheet.addAction(pgAction)
+		posActionSheet.addAction(pgAction)
 		
-		let noneAction = UIAlertAction(title: "None", style: .default) { (_) in
-			self.performRoleChanging(role: 0)
+		let noneAction = UIAlertAction(title: "-", style: .default) { (_) in
+			self.performPosChanging(pos: 0)
 		}
-		roleActionSheet.addAction(noneAction)
+		posActionSheet.addAction(noneAction)
 		
 		let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
-		roleActionSheet.addAction(cancelAction)
+		posActionSheet.addAction(cancelAction)
 		
-		self.present(roleActionSheet, animated: true, completion: nil)
+		self.present(posActionSheet, animated: true, completion: nil)
 	}
 	
-	private func performRoleChanging(role: Int) {
+	private func performPosChanging(pos: Int) {
 		let realm = try! Realm()
 		try! realm.write {
-			//change the role of current player in that role to none
-			if role != 0 {
-				if let currentRolePlayer = realm.objects(Player.self).filter("role = \(role)").first {
-					currentRolePlayer.role = 0
+			//change the position of current player in that position to none
+			if pos != 0 {
+				if let currentPosPlayer = realm.objects(Player.self).filter("pos = \(pos)").first {
+					currentPosPlayer.pos = 0
 				}
 			}
 			
-			//assign the player to play in that role
-			player.role = role
+			//assign the player to play in that position
+			player.pos = pos
 		}
 		
-		//refresh the role
-		btnCurrentRole.setTitle("\(player.roleName)", for: .normal)
+		//refresh the pisition
+		btnCurrentPos.setTitle("\(player.posName)", for: .normal)
 	}
 }

@@ -63,10 +63,10 @@ class ViewController: UIViewController {
 			}
 			let player = Player.generate(baseOn: playerBase)
 			
-			//set the initial exp and role
+			//set the initial exp and position
 			player.exp = 50
 			if i <= 5 {
-				player.role = i
+				player.pos = i
 			}
 			players.append(player)
 		}

@@ -16,7 +16,7 @@ class Player: Object {
 	@objc dynamic var nameJa = ""
 	@objc dynamic var nameZh = ""
 	@objc dynamic var portrait = ""
-	@objc dynamic var posBase = 0
+	@objc dynamic var itlBase = 0
 	@objc dynamic var spdBase = 0
 	@objc dynamic var strBase = 0
 	@objc dynamic var offBase = 0
@@ -29,7 +29,7 @@ class Player: Object {
 	@objc dynamic var willInsideScoring = false
 	@objc dynamic var lv = 1
 	@objc dynamic var exp = 0
-	@objc dynamic var pos = 0
+	@objc dynamic var itl = 0
 	@objc dynamic var spd = 0
 	@objc dynamic var str = 0
 	@objc dynamic var off = 0
@@ -37,14 +37,14 @@ class Player: Object {
 	@objc dynamic var plm = 0
 	@objc dynamic var stl = 0
 	@objc dynamic var reb = 0
-	@objc dynamic var role = 0
+	@objc dynamic var pos = 0
 	
 	override static func primaryKey() -> String? {
 		return "id"
 	}
 	
 	override static func indexedProperties() -> [String] {
-		return ["role"]
+		return ["pos"]
 	}
 	
 	static func generate(baseOn base: PlayerBase) -> Player {
@@ -54,7 +54,7 @@ class Player: Object {
 		player.nameJa = base.nameJa
 		player.nameZh = base.nameZh
 		player.portrait = base.portrait
-		player.posBase = base.posBase
+		player.itlBase = base.itlBase
 		player.spdBase = base.spdBase
 		player.strBase = base.strBase
 		player.offBase = base.offBase
@@ -72,7 +72,7 @@ class Player: Object {
 	}
 	
 	var overall: Int {
-		return pos + spd + str + off + def + plm + stl + reb
+		return itl + spd + str + off + def + plm + stl + reb
 	}
 	
 	var name: String {
@@ -90,8 +90,8 @@ class Player: Object {
 		}
 	}
 	
-	var roleName: String {
-		switch self.role {
+	var posName: String {
+		switch self.pos {
 		case 1:
 			return "PG"
 		case 2:
@@ -109,7 +109,7 @@ class Player: Object {
 
 	private func autoSetAbilities() {
 		let multiplier = lv + 9
-		pos = posBase * multiplier
+		itl = itlBase * multiplier
 		spd = spdBase * multiplier
 		str = strBase * multiplier
 		off = offBase * multiplier

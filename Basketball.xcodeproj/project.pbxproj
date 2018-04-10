@@ -32,8 +32,6 @@
 /* Begin PBXFileReference section */
 		223380D02063F9A900437BB1 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		223380D220674CBB00437BB1 /* PlayerDetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetialViewController.swift; sourceTree = "<group>"; };
-		227988FF207A4DA400807BB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		22798900207A4DA600807BB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		228985C6205E897600F3B722 /* Basketball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Basketball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		228985C9205E897600F3B722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		228985CB205E897600F3B722 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -300,8 +298,6 @@
 			children = (
 				22D8540C207647A40022F2BF /* zh-Hans */,
 				22D8540D207647A60022F2BF /* ja */,
-				227988FF207A4DA400807BB7 /* Base */,
-				22798900207A4DA600807BB7 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

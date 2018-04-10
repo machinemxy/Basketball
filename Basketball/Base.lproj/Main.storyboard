@@ -239,12 +239,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yS0-Zf-zs2">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="POS"/>
-                                                <connections>
-                                                    <action selector="btnPosClicked:" destination="yvT-I5-xSC" eventType="touchUpInside" id="hNE-jm-btT"/>
-                                                </connections>
+                                                <state key="normal" title="ITL"/>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOU-nt-gjT">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ITL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOU-nt-gjT">
                                                 <rect key="frame" x="80" y="0.0" width="80" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -350,14 +347,14 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rjr-3L-7yW">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="Role"/>
+                                                <state key="normal" title="POS"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1q-yW-dm3">
                                                 <rect key="frame" x="80" y="0.0" width="80" height="44"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <state key="normal" title="-"/>
                                                 <connections>
-                                                    <action selector="changeRole:" destination="yvT-I5-xSC" eventType="touchUpInside" id="mFG-ye-SM0"/>
+                                                    <action selector="changePos:" destination="yvT-I5-xSC" eventType="touchUpInside" id="ezD-HY-UjH"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWN-Jh-vER">
@@ -447,16 +444,16 @@
                         <viewLayoutGuide key="safeArea" id="FEl-4o-Hrv"/>
                     </view>
                     <connections>
-                        <outlet property="btnCurrentRole" destination="w1q-yW-dm3" id="pIj-6v-qkS"/>
+                        <outlet property="btnCurrentPos" destination="w1q-yW-dm3" id="LEt-RM-EhL"/>
                         <outlet property="imgPortrait" destination="Gix-rB-Ej8" id="WKO-A1-DBd"/>
                         <outlet property="lblDef" destination="dyb-TZ-cEV" id="owz-zt-rZD"/>
                         <outlet property="lblEXP" destination="83F-K3-zY4" id="Qg6-Cw-8lF"/>
                         <outlet property="lblInfo" destination="A7z-Ek-yOd" id="ftt-hb-1f4"/>
+                        <outlet property="lblItl" destination="IOU-nt-gjT" id="CsJ-9A-k5L"/>
                         <outlet property="lblLV" destination="4Ga-YL-Xh3" id="bGR-sq-ArL"/>
                         <outlet property="lblName" destination="TDA-vI-jK5" id="dtC-I1-c7e"/>
                         <outlet property="lblOff" destination="CuB-do-JqK" id="Tlm-yp-mFW"/>
                         <outlet property="lblPlm" destination="mya-1c-m37" id="I7w-Mo-tz5"/>
-                        <outlet property="lblPos" destination="IOU-nt-gjT" id="8Ty-4K-Fwv"/>
                         <outlet property="lblReb" destination="0qm-iT-Qve" id="1uZ-bT-z65"/>
                         <outlet property="lblSpd" destination="Bc4-Ib-tF5" id="MXD-fi-CAt"/>
                         <outlet property="lblStl" destination="KfU-Tb-con" id="ux2-rN-FaO"/>

@@ -37,10 +37,10 @@ class PlayerTableViewController: UITableViewController {
 
 		if let myPlayer = myPlayers?[indexPath.row] {
 			cell.textLabel?.text = myPlayer.name
-			let detail = NSLocalizedString("LV: ", comment: "") + "\(myPlayer.lv)" + NSLocalizedString("  Overall: ", comment: "") + "\(myPlayer.overall)"
+			let detail = "LV: \(myPlayer.lv)  Overall: \(myPlayer.overall)"
 			cell.detailTextLabel?.text = detail
-			if myPlayer.role > 0 {
-				cell.imageView?.image = UIImage(named: myPlayer.roleName)
+			if myPlayer.pos > 0 {
+				cell.imageView?.image = UIImage(named: myPlayer.posName)
 			} else {
 				cell.imageView?.image = nil
 			}
@@ -66,7 +66,7 @@ class PlayerTableViewController: UITableViewController {
 	}
 	
 	private func fetchMyPlayers() {
-		let playerSortor = [SortDescriptor(keyPath: "role", ascending: false),
+		let playerSortor = [SortDescriptor(keyPath: "pos", ascending: false),
 							SortDescriptor(keyPath: "lv", ascending: false)]
 		
 		let realm = try! Realm()

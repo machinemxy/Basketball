@@ -16,7 +16,7 @@ class PlayerBase: Object, Codable {
 	@objc dynamic var nameJa = ""
 	@objc dynamic var nameZh = ""
 	@objc dynamic var portrait = ""
-	@objc dynamic var posBase = 0
+	@objc dynamic var itlBase = 0
 	@objc dynamic var spdBase = 0
 	@objc dynamic var strBase = 0
 	@objc dynamic var offBase = 0
