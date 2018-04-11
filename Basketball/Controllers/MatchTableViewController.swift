@@ -16,13 +16,8 @@ class MatchTableViewController: UITableViewController {
         super.viewDidLoad()
 		
 		allTornaments = JsonHelper.parse(jsonFileName: "Tornaments")
-    }
-	
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
-		
 		setAvailableTornaments()
-	}
+    }
 	
     // MARK: - Table view data source
 
@@ -121,7 +116,5 @@ class MatchTableViewController: UITableViewController {
 				}
 			}
 		}
-		
-		tableView.reloadData()
 	}
 }

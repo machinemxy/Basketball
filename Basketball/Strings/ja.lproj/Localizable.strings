@@ -14,3 +14,14 @@
 //player detail view
 "Please choose"="選び";
 "Cancel"="キャンセル";
+"ITL intro"="知力、シュートの攻防と組織に影響を与える。";
+"SPD intro"="速度、突破の攻防と盗みに影響を与える。";
+"STR intro"="力量。内線の攻防とリバウンドに影響を与える。";
+"OFF intro"="選手の攻撃能力。";
+"DEF intro"="選手の守備能力。";
+"PLM intro"="選手の組織能力。";
+"STL intro"="選手の盗み能力。";
+"REB intro"="選手のリバウンド能力。";
+"POS intro"="選手の位置。内線選手は力量とリバが必要、外線選手は知力、速度、組織、盗みが必要。";
+"Traits intro"="特性は数値以外のアドバンテージを与える。";
+"Tendency intro"="選手は選択中の傾向で攻撃する。";

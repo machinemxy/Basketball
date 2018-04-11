@@ -14,3 +14,14 @@
 //player detail view
 "Please choose"="请选择";
 "Cancel"="取消";
+"ITL intro"="篮球智商，影响空位投篮及其防守，以及组织进攻。";
+"SPD intro"="速度，影响持球突破及其防守，以及断球。";
+"STR intro"="力量，影响内线强打及其防守，以及篮板。";
+"OFF intro"="球员的进攻技巧值。";
+"DEF intro"="球员的防守技巧值。";
+"PLM intro"="球员的组织进攻技巧值。";
+"STL intro"="球员的断球技巧值。";
+"REB intro"="球员的篮板技巧值。";
+"POS intro"="球员的位置。内线球员更需要力量与篮板，外线球员更需要智商，速度，组织，断球。";
+"Traits intro"="特性将给予球员数值之外的优势。";
+"Tendency intro"="球员将会根据所选择的倾向来进攻。";

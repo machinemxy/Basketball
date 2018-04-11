@@ -35,7 +35,51 @@ class PlayerDetialViewController: UIViewController {
 		showPosActionSheet()
 	}
 	
-    override func viewDidLoad() {
+	@IBAction func itlPressed(_ sender: Any) {
+		lblInfo.text = NSLocalizedString("ITL intro", comment: "")
+	}
+	
+	@IBAction func spdPressed(_ sender: Any) {
+		lblInfo.text = NSLocalizedString("SPD intro", comment: "")
+	}
+	
+	@IBAction func strPressed(_ sender: Any) {
+		lblInfo.text = NSLocalizedString("STR intro", comment: "")
+	}
+	
+	@IBAction func offPressed(_ sender: Any) {
+		lblInfo.text = NSLocalizedString("OFF intro", comment: "")
+	}
+	
+	@IBAction func defPressed(_ sender: Any) {
+		lblInfo.text = NSLocalizedString("DEF intro", comment: "")
+	}
+	
+	@IBAction func plmPressed(_ sender: Any) {
+		lblInfo.text = NSLocalizedString("PLM intro", comment: "")
+	}
+	
+	@IBAction func stlPressed(_ sender: Any) {
+		lblInfo.text = NSLocalizedString("STL intro", comment: "")
+	}
+	
+	@IBAction func rebPressed(_ sender: Any) {
+		lblInfo.text = NSLocalizedString("REB intro", comment: "")
+	}
+	
+	@IBAction func posPressed(_ sender: Any) {
+		lblInfo.text = NSLocalizedString("POS intro", comment: "")
+	}
+	
+	@IBAction func traitsPressed(_ sender: Any) {
+		lblInfo.text = NSLocalizedString("Traits intro", comment: "")
+	}
+	
+	@IBAction func tendencyPressed(_ sender: Any) {
+		lblInfo.text = NSLocalizedString("Tendency intro", comment: "")
+	}
+	
+	override func viewDidLoad() {
         super.viewDidLoad()
 
         setView()

@@ -240,6 +240,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="ITL"/>
+                                                <connections>
+                                                    <action selector="itlPressed:" destination="yvT-I5-xSC" eventType="touchUpInside" id="Xod-KE-4GC"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ITL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOU-nt-gjT">
                                                 <rect key="frame" x="80" y="0.0" width="80" height="44"/>
@@ -251,6 +254,9 @@
                                                 <rect key="frame" x="160" y="0.0" width="80" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="SPD"/>
+                                                <connections>
+                                                    <action selector="spdPressed:" destination="yvT-I5-xSC" eventType="touchUpInside" id="gyj-eH-T9H"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bc4-Ib-tF5">
                                                 <rect key="frame" x="240" y="0.0" width="80" height="44"/>
@@ -267,6 +273,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="STR"/>
+                                                <connections>
+                                                    <action selector="strPressed:" destination="yvT-I5-xSC" eventType="touchUpInside" id="VbN-Gr-iOS"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nks-f5-Xwd">
                                                 <rect key="frame" x="80" y="0.0" width="80" height="44"/>
@@ -278,6 +287,9 @@
                                                 <rect key="frame" x="160" y="0.0" width="80" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="OFF"/>
+                                                <connections>
+                                                    <action selector="offPressed:" destination="yvT-I5-xSC" eventType="touchUpInside" id="8eo-5f-sdt"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OFF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuB-do-JqK">
                                                 <rect key="frame" x="240" y="0.0" width="80" height="44"/>
@@ -294,6 +306,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="DEF"/>
+                                                <connections>
+                                                    <action selector="defPressed:" destination="yvT-I5-xSC" eventType="touchUpInside" id="xVl-Lb-eRp"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyb-TZ-cEV">
                                                 <rect key="frame" x="80" y="0.0" width="80" height="44"/>
@@ -305,6 +320,9 @@
                                                 <rect key="frame" x="160" y="0.0" width="80" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="PLM"/>
+                                                <connections>
+                                                    <action selector="plmPressed:" destination="yvT-I5-xSC" eventType="touchUpInside" id="6ft-XA-BEA"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mya-1c-m37">
                                                 <rect key="frame" x="240" y="0.0" width="80" height="44"/>
@@ -321,6 +339,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="STL"/>
+                                                <connections>
+                                                    <action selector="stlPressed:" destination="yvT-I5-xSC" eventType="touchUpInside" id="Trm-Jq-7dw"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfU-Tb-con">
                                                 <rect key="frame" x="80" y="0.0" width="80" height="44"/>
@@ -332,6 +353,9 @@
                                                 <rect key="frame" x="160" y="0.0" width="80" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="REB"/>
+                                                <connections>
+                                                    <action selector="rebPressed:" destination="yvT-I5-xSC" eventType="touchUpInside" id="cXr-EU-0GK"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qm-iT-Qve">
                                                 <rect key="frame" x="240" y="0.0" width="80" height="44"/>
@@ -348,6 +372,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="POS"/>
+                                                <connections>
+                                                    <action selector="posPressed:" destination="yvT-I5-xSC" eventType="touchUpInside" id="OFz-5g-RqJ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1q-yW-dm3">
                                                 <rect key="frame" x="80" y="0.0" width="80" height="44"/>
@@ -361,13 +388,30 @@
                                                 <rect key="frame" x="160" y="0.0" width="80" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="Traits"/>
+                                                <connections>
+                                                    <action selector="traitsPressed:" destination="yvT-I5-xSC" eventType="touchUpInside" id="OX2-Mb-NdG"/>
+                                                </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Do1-Ta-gTi">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4B-RT-s8v">
                                                 <rect key="frame" x="240" y="0.0" width="80" height="44"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPd-jn-6yb">
+                                                        <rect key="frame" x="0.0" y="6" width="32" height="32"/>
+                                                        <state key="normal" image="basketball"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fU-CK-KQT">
+                                                        <rect key="frame" x="40" y="6" width="32" height="32"/>
+                                                        <state key="normal" image="basketball"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="0fU-CK-KQT" firstAttribute="leading" secondItem="fPd-jn-6yb" secondAttribute="trailing" constant="8" id="29Z-pt-lCg"/>
+                                                    <constraint firstItem="fPd-jn-6yb" firstAttribute="centerY" secondItem="X4B-RT-s8v" secondAttribute="centerY" id="2WR-a9-z18"/>
+                                                    <constraint firstItem="0fU-CK-KQT" firstAttribute="centerY" secondItem="X4B-RT-s8v" secondAttribute="centerY" id="5hU-DS-RTu"/>
+                                                    <constraint firstItem="fPd-jn-6yb" firstAttribute="leading" secondItem="X4B-RT-s8v" secondAttribute="leading" id="Wpa-Ko-8m7"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mOD-u4-eU7">
@@ -377,6 +421,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="Tendency"/>
+                                                <connections>
+                                                    <action selector="tendencyPressed:" destination="yvT-I5-xSC" eventType="touchUpInside" id="7bH-dG-YJl"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fks-E1-Mg2">
                                                 <rect key="frame" x="80" y="0.0" width="80" height="44"/>
