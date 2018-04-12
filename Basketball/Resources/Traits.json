@@ -1,0 +1,24 @@
+[
+  {
+    "id":1,
+    "icon":"3pt",
+    "nameEn":"3pt Star",
+    "nameJa":"３ポイント　スター",
+    "nameZh":"三分射手",
+    "infoEn":"Tend to shoot outside the 3pt point.",
+    "infoJa":"よく３ポイントライン外発砲する。",
+    "infoZh":"倾向在三分线外投篮得分。",
+    "owned":false
+  },
+  {
+    "id":2,
+    "icon":"ace",
+    "nameEn":"Ace",
+    "nameJa":"エイス",
+    "nameZh":"王牌",
+    "infoEn":"Be given more chance to attack.",
+    "infoJa":"他人より多く攻撃を参加する。",
+    "infoZh":"获得更多球权来参加进攻。",
+    "owned":false
+  }
+]

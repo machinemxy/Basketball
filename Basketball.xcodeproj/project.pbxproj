@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		223380D12063F9A900437BB1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223380D02063F9A900437BB1 /* Player.swift */; };
 		223380D320674CBB00437BB1 /* PlayerDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223380D220674CBB00437BB1 /* PlayerDetialViewController.swift */; };
+		22798912207F97EE00807BB7 /* Trait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22798911207F97EE00807BB7 /* Trait.swift */; };
 		228985CA205E897600F3B722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985C9205E897600F3B722 /* AppDelegate.swift */; };
 		228985CC205E897600F3B722 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985CB205E897600F3B722 /* ViewController.swift */; };
 		228985CF205E897600F3B722 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228985CD205E897600F3B722 /* Main.storyboard */; };
@@ -34,6 +35,8 @@
 		223380D220674CBB00437BB1 /* PlayerDetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetialViewController.swift; sourceTree = "<group>"; };
 		2279890F207E259400807BB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		22798910207E259700807BB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		22798911207F97EE00807BB7 /* Trait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trait.swift; sourceTree = "<group>"; };
+		22798913207F9A7B00807BB7 /* Traits.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Traits.json; sourceTree = "<group>"; };
 		228985C6205E897600F3B722 /* Basketball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Basketball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		228985C9205E897600F3B722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		228985CB205E897600F3B722 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +131,7 @@
 				228985E8205E9C5400F3B722 /* Match.swift */,
 				228985EC20622EAA00F3B722 /* PlayerBase.swift */,
 				223380D02063F9A900437BB1 /* Player.swift */,
+				22798911207F97EE00807BB7 /* Trait.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -137,6 +141,7 @@
 			children = (
 				228985E4205E99E400F3B722 /* Tornaments.json */,
 				22D85400206F58280022F2BF /* PlayerBase.json */,
+				22798913207F9A7B00807BB7 /* Traits.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 				223380D320674CBB00437BB1 /* PlayerDetialViewController.swift in Sources */,
 				228985E9205E9C5400F3B722 /* Match.swift in Sources */,
 				223380D12063F9A900437BB1 /* Player.swift in Sources */,
+				22798912207F97EE00807BB7 /* Trait.swift in Sources */,
 				228985FB206251B300F3B722 /* JsonHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
