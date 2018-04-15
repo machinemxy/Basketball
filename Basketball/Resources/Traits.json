@@ -1,18 +1,16 @@
 [
   {
-    "id":1,
-    "icon":"3pt",
+    "identifier":"3pt",
     "nameEn":"3pt Star",
     "nameJa":"３ポイント　スター",
     "nameZh":"三分射手",
     "infoEn":"Tend to shoot outside the 3pt point.",
     "infoJa":"よく３ポイントライン外発砲する。",
     "infoZh":"倾向在三分线外投篮得分。",
-    "owned":false
+    "owned":true
   },
   {
-    "id":2,
-    "icon":"ace",
+    "identifier":"ace",
     "nameEn":"Ace",
     "nameJa":"エイス",
     "nameZh":"王牌",
@@ -20,5 +18,15 @@
     "infoJa":"他人より多く攻撃を参加する。",
     "infoZh":"获得更多球权来参加进攻。",
     "owned":false
+  },
+  {
+    "identifier":"bull",
+    "nameEn":"Bull",
+    "nameJa":"ブール",
+    "nameZh":"公牛",
+    "infoEn":"Tend to cause opponent's foul when playing breakthrough or inside.",
+    "infoJa":"突破と内線攻撃の時相手のファウルを起こしやすい。",
+    "infoZh":"突破和内线强打时更容易造成对手犯规。",
+    "owned":true
   }
 ]

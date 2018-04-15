@@ -6,13 +6,12 @@
 //  Copyright © 2018年 Ma Xueyuan. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Realm
 import RealmSwift
 
 class Trait: Object, Codable {
-	@objc dynamic var id = 0
-	@objc dynamic var icon = ""
+	@objc dynamic var identifier = ""
 	@objc dynamic var nameEn = ""
 	@objc dynamic var nameJa = ""
 	@objc dynamic var nameZh = ""
@@ -22,7 +21,7 @@ class Trait: Object, Codable {
 	@objc dynamic var owned = false
 	
 	override static func primaryKey() -> String? {
-		return "id"
+		return "identifier"
 	}
 	
 	var name: String {
@@ -53,5 +52,9 @@ class Trait: Object, Codable {
 		default:
 			return infoEn
 		}
+	}
+	
+	var icon: UIImage {
+		return UIImage(named: identifier)!
 	}
 }

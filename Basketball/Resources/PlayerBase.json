@@ -15,7 +15,8 @@
     "rebBase":5,
     "willShoot":true,
     "willBreakthrough":false,
-    "willInsideScoring":false
+    "willInsideScoring":false,
+    "trait1id":"3pt"
   },
   {
     "id":2,
@@ -33,7 +34,8 @@
     "rebBase":6,
     "willShoot":false,
     "willBreakthrough":true,
-    "willInsideScoring":false
+    "willInsideScoring":false,
+    "trait1id":""
   },
   {
     "id":3,
@@ -51,7 +53,8 @@
     "rebBase":7,
     "willShoot":true,
     "willBreakthrough":true,
-    "willInsideScoring":true
+    "willInsideScoring":true,
+    "trait1id":""
   },
   {
     "id":4,
@@ -69,7 +72,8 @@
     "rebBase":8,
     "willShoot":false,
     "willBreakthrough":false,
-    "willInsideScoring":true
+    "willInsideScoring":true,
+    "trait1id":""
   },
   {
     "id":5,
@@ -87,7 +91,8 @@
     "rebBase":9,
     "willShoot":true,
     "willBreakthrough":false,
-    "willInsideScoring":true
+    "willInsideScoring":true,
+    "trait1id":""
   },
   {
     "id":6,
@@ -105,6 +110,7 @@
     "rebBase":8,
     "willShoot":true,
     "willBreakthrough":true,
-    "willInsideScoring":true
+    "willInsideScoring":true,
+    "trait1id":""
   }
 ]

@@ -11,7 +11,7 @@ import Realm
 import RealmSwift
 
 class PlayerDetialViewController: UIViewController {
-	var player = Player()
+	var player: Player!
 	
 	@IBOutlet weak var lblName: UILabel!
 	@IBOutlet weak var lblLV: UILabel!
@@ -30,6 +30,8 @@ class PlayerDetialViewController: UIViewController {
 	@IBOutlet weak var swInside: UISwitch!
 	@IBOutlet weak var btnCurrentPos: UIButton!
 	@IBOutlet weak var lblInfo: UILabel!
+	@IBOutlet weak var btnTrait1: UIButton!
+	@IBOutlet weak var btnTrait2: UIButton!
 	
 	@IBAction func changePos(_ sender: Any) {
 		showPosActionSheet()
@@ -79,9 +81,22 @@ class PlayerDetialViewController: UIViewController {
 		lblInfo.text = NSLocalizedString("Tendency intro", comment: "")
 	}
 	
+	@IBAction func trait1Pressed(_ sender: Any) {
+		if let trait = player.getTrait(traitOrder: .first) {
+			lblInfo.text = trait.info
+		}
+	}
+	
+	@IBAction func trait2Pressed(_ sender: Any) {
+		if let trait = player.getTrait(traitOrder: .second) {
+			lblInfo.text = trait.info
+		}
+	}
+	
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
-
+		
         setView()
     }
 
@@ -114,6 +129,8 @@ class PlayerDetialViewController: UIViewController {
 		swShoot.isOn = player.willShoot
 		swBreak.isOn = player.willBreakthrough
 		swInside.isOn = player.willInsideScoring
+		btnTrait1.setImage(player.getTraitIcon(traitOrder: .first), for: .normal)
+		btnTrait2.setImage(player.getTraitIcon(traitOrder: .second), for: .normal)
 	}
 	
 	private func showPosActionSheet() {

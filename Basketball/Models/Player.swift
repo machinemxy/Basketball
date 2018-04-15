@@ -6,7 +6,7 @@
 //  Copyright © 2018年 Ma Xueyuan. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Realm
 import RealmSwift
 
@@ -38,6 +38,8 @@ class Player: Object {
 	@objc dynamic var stl = 0
 	@objc dynamic var reb = 0
 	@objc dynamic var pos = 0
+	@objc dynamic var trait1id = ""
+	@objc dynamic var trait2id = ""
 	
 	override static func primaryKey() -> String? {
 		return "id"
@@ -65,6 +67,7 @@ class Player: Object {
 		player.willShoot = base.willShoot
 		player.willBreakthrough = base.willBreakthrough
 		player.willInsideScoring = base.willInsideScoring
+		player.trait1id = base.trait1id
 		
 		player.autoSetAbilities()
 		
@@ -117,5 +120,22 @@ class Player: Object {
 		plm = plmBase * multiplier
 		stl = stlBase * multiplier
 		reb = rebBase * multiplier
+	}
+	
+	func getTrait(traitOrder: TraitOrder) -> Trait? {
+		let traitId = traitOrder == .first ? self.trait1id : self.trait2id
+		
+		if traitId == "" {
+			return nil
+		}
+		
+		let realm = try! Realm()
+		return realm.object(ofType: Trait.self, forPrimaryKey: traitId)
+	}
+	
+	func getTraitIcon(traitOrder: TraitOrder) -> UIImage? {
+		let traitId = traitOrder == .first ? self.trait1id : self.trait2id
+		let imgName = traitId == "" ? "blank" : traitId
+		return UIImage(named: imgName)
 	}
 }

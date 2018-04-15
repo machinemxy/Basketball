@@ -27,6 +27,7 @@ class PlayerBase: Object, Codable {
 	@objc dynamic var willShoot = false
 	@objc dynamic var willBreakthrough = false
 	@objc dynamic var willInsideScoring = false
+	@objc dynamic var trait1id = ""
 	
 	override static func primaryKey() -> String? {
 		return "id"

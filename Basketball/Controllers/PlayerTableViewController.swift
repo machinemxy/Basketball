@@ -11,7 +11,7 @@ import Realm
 import RealmSwift
 
 class PlayerTableViewController: UITableViewController {
-	var myPlayers: Results<Player>?
+	var myPlayers: Results<Player>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,27 +25,14 @@ class PlayerTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		if let numberOfRows = myPlayers?.count {
-			return numberOfRows
-		} else {
-			return 0
-		}
+		return myPlayers.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell", for: indexPath) as! PlayerTableViewCell
 
-		if let myPlayer = myPlayers?[indexPath.row] {
-			cell.textLabel?.text = myPlayer.name
-			let detail = "LV: \(myPlayer.lv)  Overall: \(myPlayer.overall)"
-			cell.detailTextLabel?.text = detail
-			if myPlayer.pos > 0 {
-				cell.imageView?.image = UIImage(named: myPlayer.posName)
-			} else {
-				cell.imageView?.image = nil
-			}
-		}
-
+		let myPlayer = myPlayers[indexPath.row]
+		cell.setup(with: myPlayer)
         return cell
     }
 

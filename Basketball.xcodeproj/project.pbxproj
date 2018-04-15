@@ -10,6 +10,10 @@
 		223380D12063F9A900437BB1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223380D02063F9A900437BB1 /* Player.swift */; };
 		223380D320674CBB00437BB1 /* PlayerDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223380D220674CBB00437BB1 /* PlayerDetialViewController.swift */; };
 		22798912207F97EE00807BB7 /* Trait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22798911207F97EE00807BB7 /* Trait.swift */; };
+		2279891520821DB900807BB7 /* TraitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279891420821DB900807BB7 /* TraitTableViewController.swift */; };
+		227989322082EFAE00807BB7 /* Traits.json in Resources */ = {isa = PBXBuildFile; fileRef = 22798913207F9A7B00807BB7 /* Traits.json */; };
+		227989342082F57100807BB7 /* TraitOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227989332082F57100807BB7 /* TraitOrder.swift */; };
+		227989362083041000807BB7 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227989352083041000807BB7 /* PlayerTableViewCell.swift */; };
 		228985CA205E897600F3B722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985C9205E897600F3B722 /* AppDelegate.swift */; };
 		228985CC205E897600F3B722 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985CB205E897600F3B722 /* ViewController.swift */; };
 		228985CF205E897600F3B722 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228985CD205E897600F3B722 /* Main.storyboard */; };
@@ -37,6 +41,9 @@
 		22798910207E259700807BB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		22798911207F97EE00807BB7 /* Trait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trait.swift; sourceTree = "<group>"; };
 		22798913207F9A7B00807BB7 /* Traits.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Traits.json; sourceTree = "<group>"; };
+		2279891420821DB900807BB7 /* TraitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitTableViewController.swift; sourceTree = "<group>"; };
+		227989332082F57100807BB7 /* TraitOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitOrder.swift; sourceTree = "<group>"; };
+		227989352083041000807BB7 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		228985C6205E897600F3B722 /* Basketball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Basketball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		228985C9205E897600F3B722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		228985CB205E897600F3B722 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +127,8 @@
 				228985DE205E956D00F3B722 /* MatchTableViewController.swift */,
 				228985F62062456300F3B722 /* PlayerTableViewController.swift */,
 				223380D220674CBB00437BB1 /* PlayerDetialViewController.swift */,
+				2279891420821DB900807BB7 /* TraitTableViewController.swift */,
+				227989352083041000807BB7 /* PlayerTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -132,6 +141,7 @@
 				228985EC20622EAA00F3B722 /* PlayerBase.swift */,
 				223380D02063F9A900437BB1 /* Player.swift */,
 				22798911207F97EE00807BB7 /* Trait.swift */,
+				227989332082F57100807BB7 /* TraitOrder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -228,6 +238,7 @@
 			files = (
 				228985EA206000D000F3B722 /* Tornaments.json in Resources */,
 				22D85411207649EA0022F2BF /* InfoPlist.strings in Resources */,
+				227989322082EFAE00807BB7 /* Traits.json in Resources */,
 				22D85409207647A10022F2BF /* Localizable.strings in Resources */,
 				228985D4205E897600F3B722 /* LaunchScreen.storyboard in Resources */,
 				22D85401206F58280022F2BF /* PlayerBase.json in Resources */,
@@ -271,8 +282,11 @@
 				228985CA205E897600F3B722 /* AppDelegate.swift in Sources */,
 				228985F72062456300F3B722 /* PlayerTableViewController.swift in Sources */,
 				223380D320674CBB00437BB1 /* PlayerDetialViewController.swift in Sources */,
+				2279891520821DB900807BB7 /* TraitTableViewController.swift in Sources */,
+				227989342082F57100807BB7 /* TraitOrder.swift in Sources */,
 				228985E9205E9C5400F3B722 /* Match.swift in Sources */,
 				223380D12063F9A900437BB1 /* Player.swift in Sources */,
+				227989362083041000807BB7 /* PlayerTableViewCell.swift in Sources */,
 				22798912207F97EE00807BB7 /* Trait.swift in Sources */,
 				228985FB206251B300F3B722 /* JsonHelper.swift in Sources */,
 			);
