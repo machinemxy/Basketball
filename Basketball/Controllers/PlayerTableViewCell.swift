@@ -10,6 +10,7 @@ import UIKit
 
 class PlayerTableViewCell: UITableViewCell {
 	var player: Player!
+	var delegate: PlayerTableViewCellProtocal!
 	
 	@IBOutlet weak var imgPosition: UIImageView!
 	@IBOutlet weak var lblName: UILabel!
@@ -17,10 +18,16 @@ class PlayerTableViewCell: UITableViewCell {
 	@IBOutlet weak var btnTrait1: UIButton!
 	@IBOutlet weak var btnTrait2: UIButton!
 	@IBAction func trait1Pressed(_ sender: Any) {
-		print("not done yet")
+		guard let trait = player.getTrait(traitOrder: .first) else {
+			return
+		}
+		delegate.showTraitAlert(traitAlertController: trait.createTraitAlertController())
 	}
 	@IBAction func trait2Pressed(_ sender: Any) {
-		print("not done yet")
+		guard let trait = player.getTrait(traitOrder: .second) else {
+			return
+		}
+		delegate.showTraitAlert(traitAlertController: trait.createTraitAlertController())
 	}
 	
 	func setup(with player: Player) {

@@ -25,3 +25,6 @@
 "POS intro"="選手の位置。内線選手は力量とリバが必要、外線選手は知力、速度、組織、盗みが必要。";
 "Traits intro"="特性は数値以外のアドバンテージを与える。";
 "Tendency intro"="選手は選択中の傾向で攻撃する。";
+
+//trait alert controller
+"Close"="閉じる";

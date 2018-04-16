@@ -25,3 +25,6 @@
 "POS intro"="Position. Inside player needs STR and REB. Outside player need ITL, SPD, PLM and STL.";
 "Traits intro"="Traits help player get advantage in some special way.";
 "Tendency intro"="Player will try to use the assigned way to get score.";
+
+//trait alert controller
+"Close"="Close";

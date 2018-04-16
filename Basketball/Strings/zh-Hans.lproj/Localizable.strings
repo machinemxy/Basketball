@@ -25,3 +25,6 @@
 "POS intro"="球员的位置。内线球员更需要力量与篮板，外线球员更需要智商，速度，组织，断球。";
 "Traits intro"="特性将给予球员数值之外的优势。";
 "Tendency intro"="球员将会根据所选择的倾向来进攻。";
+
+//trait alert controller
+"Close"="关闭";

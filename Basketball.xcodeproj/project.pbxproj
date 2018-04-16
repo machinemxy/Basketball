@@ -14,6 +14,8 @@
 		227989322082EFAE00807BB7 /* Traits.json in Resources */ = {isa = PBXBuildFile; fileRef = 22798913207F9A7B00807BB7 /* Traits.json */; };
 		227989342082F57100807BB7 /* TraitOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227989332082F57100807BB7 /* TraitOrder.swift */; };
 		227989362083041000807BB7 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227989352083041000807BB7 /* PlayerTableViewCell.swift */; };
+		2279893920847AE300807BB7 /* PlayerTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279893820847AE300807BB7 /* PlayerTableViewCellDelegate.swift */; };
+		2279893B2084813F00807BB7 /* TraitSetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279893A2084813F00807BB7 /* TraitSetTableViewController.swift */; };
 		228985CA205E897600F3B722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985C9205E897600F3B722 /* AppDelegate.swift */; };
 		228985CC205E897600F3B722 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985CB205E897600F3B722 /* ViewController.swift */; };
 		228985CF205E897600F3B722 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228985CD205E897600F3B722 /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 		2279891420821DB900807BB7 /* TraitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitTableViewController.swift; sourceTree = "<group>"; };
 		227989332082F57100807BB7 /* TraitOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitOrder.swift; sourceTree = "<group>"; };
 		227989352083041000807BB7 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
+		2279893820847AE300807BB7 /* PlayerTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCellDelegate.swift; sourceTree = "<group>"; };
+		2279893A2084813F00807BB7 /* TraitSetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitSetTableViewController.swift; sourceTree = "<group>"; };
 		228985C6205E897600F3B722 /* Basketball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Basketball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		228985C9205E897600F3B722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		228985CB205E897600F3B722 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2279893720847AC600807BB7 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				228985C9205E897600F3B722 /* AppDelegate.swift */,
+				2279893820847AE300807BB7 /* PlayerTableViewCellDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		228985BD205E897600F3B722 = {
 			isa = PBXGroup;
 			children = (
@@ -105,11 +118,11 @@
 		228985C8205E897600F3B722 /* Basketball */ = {
 			isa = PBXGroup;
 			children = (
+				2279893720847AC600807BB7 /* Delegates */,
 				22D854062076474D0022F2BF /* Strings */,
 				228985E2205E979F00F3B722 /* Resources */,
 				228985E1205E979A00F3B722 /* Models */,
 				228985DD205E955100F3B722 /* Controllers */,
-				228985C9205E897600F3B722 /* AppDelegate.swift */,
 				228985CD205E897600F3B722 /* Main.storyboard */,
 				228985D0205E897600F3B722 /* Assets.xcassets */,
 				228985D2205E897600F3B722 /* LaunchScreen.storyboard */,
@@ -126,9 +139,10 @@
 				228985CB205E897600F3B722 /* ViewController.swift */,
 				228985DE205E956D00F3B722 /* MatchTableViewController.swift */,
 				228985F62062456300F3B722 /* PlayerTableViewController.swift */,
+				227989352083041000807BB7 /* PlayerTableViewCell.swift */,
 				223380D220674CBB00437BB1 /* PlayerDetialViewController.swift */,
 				2279891420821DB900807BB7 /* TraitTableViewController.swift */,
-				227989352083041000807BB7 /* PlayerTableViewCell.swift */,
+				2279893A2084813F00807BB7 /* TraitSetTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -279,6 +293,8 @@
 				228985E7205E9BC700F3B722 /* Tornament.swift in Sources */,
 				228985CC205E897600F3B722 /* ViewController.swift in Sources */,
 				228985ED20622EAA00F3B722 /* PlayerBase.swift in Sources */,
+				2279893B2084813F00807BB7 /* TraitSetTableViewController.swift in Sources */,
+				2279893920847AE300807BB7 /* PlayerTableViewCellDelegate.swift in Sources */,
 				228985CA205E897600F3B722 /* AppDelegate.swift in Sources */,
 				228985F72062456300F3B722 /* PlayerTableViewController.swift in Sources */,
 				223380D320674CBB00437BB1 /* PlayerDetialViewController.swift in Sources */,

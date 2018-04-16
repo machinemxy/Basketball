@@ -57,4 +57,11 @@ class Trait: Object, Codable {
 	var icon: UIImage {
 		return UIImage(named: identifier)!
 	}
+	
+	func createTraitAlertController() -> UIAlertController {
+		let traitAlertControlelr = UIAlertController(title: name, message: info, preferredStyle: .alert)
+		let action = UIAlertAction(title: NSLocalizedString("Close", comment: ""), style: .default, handler: nil)
+		traitAlertControlelr.addAction(action)
+		return traitAlertControlelr
+	}
 }

@@ -31,21 +31,13 @@ class ViewController: UIViewController {
 	}
 	
 	private func initDB() {
-		//get playerBases from json file
 		let playerBases: [PlayerBase] = JsonHelper.parse(jsonFileName: "PlayerBase")
-		//get traits from json file
 		let traits: [Trait] = JsonHelper.parse(jsonFileName: "Traits")
 		
 		let realm = try! Realm()
 		try! realm.write {
-			//delete old playerBases and insert new playerBases
-			let oldPlayerBases = realm.objects(PlayerBase.self)
-			realm.delete(oldPlayerBases)
+			realm.deleteAll()
 			realm.add(playerBases)
-			
-			//delete old traits and insert new traits
-			let oldTraits = realm.objects(Trait.self)
-			realm.delete(oldTraits)
 			realm.add(traits)
 		}
 	}

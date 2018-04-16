@@ -10,7 +10,7 @@ import UIKit
 import Realm
 import RealmSwift
 
-class PlayerTableViewController: UITableViewController {
+class PlayerTableViewController: UITableViewController, PlayerTableViewCellProtocal {
 	var myPlayers: Results<Player>!
 
     override func viewDidLoad() {
@@ -30,18 +30,20 @@ class PlayerTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell", for: indexPath) as! PlayerTableViewCell
-
 		let myPlayer = myPlayers[indexPath.row]
 		cell.setup(with: myPlayer)
+		cell.delegate = self
         return cell
     }
-
+	
+	
+	// MARK: - Navigation
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		super.prepare(for: segue, sender: sender)
 		
 		if segue.identifier == "showPlayerDetail" {
 			let indexPath = tableView.indexPathForSelectedRow!
-			let selectedPlayer = myPlayers![indexPath.row]
+			let selectedPlayer = myPlayers[indexPath.row]
 			let playerDetailViewController = segue.destination as! PlayerDetialViewController
 			playerDetailViewController.player = selectedPlayer
 		}
@@ -52,6 +54,12 @@ class PlayerTableViewController: UITableViewController {
 		tableView.reloadData()
 	}
 	
+	//Delegation
+	func showTraitAlert(traitAlertController: UIAlertController) {
+		self.present(traitAlertController, animated: true, completion: nil)
+	}
+	
+	//private funcs
 	private func fetchMyPlayers() {
 		let playerSortor = [SortDescriptor(keyPath: "pos", ascending: false),
 							SortDescriptor(keyPath: "lv", ascending: false)]
