@@ -33,8 +33,8 @@ class PlayerDetialViewController: UIViewController {
 	@IBOutlet weak var btnTrait1: UIButton!
 	@IBOutlet weak var btnTrait2: UIButton!
 	
-	@IBAction func changePos(_ sender: Any) {
-		showPosActionSheet()
+	@IBAction func changePos(_ sender: UIButton) {
+		showPosActionSheet(sender)
 	}
 	
 	@IBAction func itlPressed(_ sender: Any) {
@@ -133,7 +133,7 @@ class PlayerDetialViewController: UIViewController {
 		btnTrait2.setImage(player.getTraitIcon(traitOrder: .second), for: .normal)
 	}
 	
-	private func showPosActionSheet() {
+	private func showPosActionSheet(_ sender: UIButton) {
 		let posActionSheet = UIAlertController(title: NSLocalizedString("Please choose", comment: ""), message: "", preferredStyle: .actionSheet)
 		
 		let cAction = UIAlertAction(title: "C", style: .default) { (_) in
@@ -168,6 +168,9 @@ class PlayerDetialViewController: UIViewController {
 		
 		let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
 		posActionSheet.addAction(cancelAction)
+		//iPad crash avoid
+		posActionSheet.popoverPresentationController?.sourceView = view
+		posActionSheet.popoverPresentationController?.sourceRect = sender.frame
 		
 		self.present(posActionSheet, animated: true, completion: nil)
 	}
