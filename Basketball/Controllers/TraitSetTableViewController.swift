@@ -74,7 +74,9 @@ class TraitSetTableViewController: UITableViewController, PlayerTableViewCellPro
 		traitActionSheetController.popoverPresentationController?.sourceView = view
 		traitActionSheetController.popoverPresentationController?.sourceRect = (tableView.cellForRow(at: indexPath)?.frame)!
 		
-		self.present(traitActionSheetController, animated: true, completion: nil)
+		self.present(traitActionSheetController, animated: true, completion: {
+			tableView.deselectRow(at: indexPath, animated: true)
+		})
 	}
 	
 	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -40,8 +40,8 @@
   {
     "id":3,
     "nameEn":"Kobayashi",
-    "nameJa":"小林　明",
-    "nameZh":"小林　明",
+    "nameJa":"小林　鳴門",
+    "nameZh":"小林　鸣门",
     "portrait":"kobayashi",
     "itlBase":7,
     "spdBase":7,
@@ -58,9 +58,9 @@
   },
   {
     "id":4,
-    "nameEn":"Kano",
-    "nameJa":"叶　庭偉",
-    "nameZh":"叶　庭伟",
+    "nameEn":"Ohniwa",
+    "nameJa":"大庭　偉",
+    "nameZh":"大庭　伟",
     "portrait":"kano",
     "itlBase":5,
     "spdBase":6,
