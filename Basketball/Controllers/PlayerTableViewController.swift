@@ -18,6 +18,16 @@ class PlayerTableViewController: UITableViewController, PlayerTableViewCellProto
 		
 		fetchMyPlayers()
     }
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		if UserDefaults.standard.bool(forKey: DefaultKey.PLAYER_CHANGED) {
+			fetchMyPlayers()
+			tableView.reloadData()
+			UserDefaults.standard.set(false, forKey: DefaultKey.PLAYER_CHANGED)
+		}
+	}
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -57,6 +67,10 @@ class PlayerTableViewController: UITableViewController, PlayerTableViewCellProto
 	//Delegation
 	func showTraitAlert(traitAlertController: UIAlertController) {
 		self.present(traitAlertController, animated: true, completion: nil)
+	}
+	
+	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return 44.0
 	}
 	
 	//private funcs

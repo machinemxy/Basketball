@@ -28,3 +28,9 @@
 
 //trait alert controller
 "Close"="Close";
+
+//Trait set table view
+"Slot 1"="Slot 1";
+"Slot 2"="Slot 2";
+"(Overwrite)"="(Overwrite)";
+"Please choose slot"="Please choose slot";

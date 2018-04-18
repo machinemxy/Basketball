@@ -134,7 +134,7 @@ class PlayerDetialViewController: UIViewController {
 	}
 	
 	private func showPosActionSheet(_ sender: UIButton) {
-		let posActionSheet = UIAlertController(title: NSLocalizedString("Please choose", comment: ""), message: "", preferredStyle: .actionSheet)
+		let posActionSheet = UIAlertController(title: NSLocalizedString("Please choose", comment: ""), message: nil, preferredStyle: .actionSheet)
 		
 		let cAction = UIAlertAction(title: "C", style: .default) { (_) in
 			self.performPosChanging(pos: 5)

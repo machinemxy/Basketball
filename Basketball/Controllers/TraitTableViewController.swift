@@ -18,6 +18,16 @@ class TraitTableViewController: UITableViewController {
 
 		fetchMyTraits()
     }
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		if UserDefaults.standard.bool(forKey: DefaultKey.TRAIT_CHANGED) {
+			fetchMyTraits()
+			tableView.reloadData()
+			UserDefaults.standard.set(false, forKey: DefaultKey.TRAIT_CHANGED)
+		}
+	}
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {

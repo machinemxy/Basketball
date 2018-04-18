@@ -28,3 +28,9 @@
 
 //trait alert controller
 "Close"="关闭";
+
+//Trait set table view
+"Slot 1"="特性栏1";
+"Slot 2"="特性栏2";
+"(Overwrite)"="（覆盖）";
+"Please choose slot"="请选择特性栏";

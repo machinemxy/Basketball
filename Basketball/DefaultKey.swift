@@ -12,4 +12,6 @@ struct DefaultKey {
 	static let DB_VERSION = "DB_VERSION" //current 1
 	static let TORNAMENT = "TORNAMENT"
 	static let MATCH = "MATCH"
+	static let PLAYER_CHANGED = "PLAYER_CHANGED"
+	static let TRAIT_CHANGED = "TRAIT_CHANGED"
 }
