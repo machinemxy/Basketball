@@ -1,0 +1,52 @@
+[
+	{
+		"id":1,
+		"nameEn":"School Tournament",
+		"nameJa":"校内トーナメント",
+		"nameZh":"校内赛",
+		"available":true,
+		"myTeamEn":"Class 5",
+		"myTeamJa":"クラス５",
+		"myTeamZh":"5班"
+	},
+	{
+		"id":2,
+		"nameEn":"Regional Tournament",
+		"nameJa":"地方予選",
+		"nameZh":"地方预选赛",
+		"available":false,
+		"myTeamEn":"Tokyo Daido Highschool",
+		"myTeamJa":"東京大同高校",
+		"myTeamZh":"东京大同高中"
+	},
+	{
+		"id":3,
+		"nameEn":"National Tournament",
+		"nameJa":"全国大会",
+		"nameZh":"全国大会",
+		"available":false,
+		"myTeamEn":"Tokyo Daido Highschool",
+		"myTeamJa":"東京大同高校",
+		"myTeamZh":"东京大同高中"
+	},
+	{
+		"id":4,
+		"nameEn":"Asian Tournament",
+		"nameJa":"アジアントーナメント",
+		"nameZh":"亚洲杯",
+		"available":false,
+		"myTeamEn":"Japan",
+		"myTeamJa":"日本",
+		"myTeamZh":"日本"
+	},
+	{
+		"id":5,
+		"nameEn":"World Tournament",
+		"nameJa":"ワールドトーナメント",
+		"nameZh":"世界杯",
+		"available":false,
+		"myTeamEn":"Japan",
+		"myTeamJa":"日本",
+		"myTeamZh":"日本"
+	}
+]

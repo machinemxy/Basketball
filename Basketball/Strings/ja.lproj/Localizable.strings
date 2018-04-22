@@ -5,9 +5,8 @@
   Created by 马学渊 on 2018/04/05.
   Copyright © 2018年 Ma Xueyuan. All rights reserved.
 */
-//match subtitle
-"1st Match"="第１戦";
-"2nd Match"="第２戦";
+//match round
+"Match #"="試合 #";
 "Semifinal"="準決勝";
 "Final"="決勝";
 

@@ -34,12 +34,16 @@ class ViewController: UIViewController {
 	private func initDB() {
 		let playerBases: [PlayerBase] = JsonHelper.parse(jsonFileName: "PlayerBase")
 		let traits: [Trait] = JsonHelper.parse(jsonFileName: "Traits")
+		let tournaments: [Tournament] = JsonHelper.parse(jsonFileName: "Tournaments")
+		let matches: [Match] = JsonHelper.parse(jsonFileName: "Matches")
 		
 		let realm = try! Realm()
 		try! realm.write {
 			realm.deleteAll()
 			realm.add(playerBases)
 			realm.add(traits)
+			realm.add(tournaments)
+			realm.add(matches)
 		}
 	}
 	

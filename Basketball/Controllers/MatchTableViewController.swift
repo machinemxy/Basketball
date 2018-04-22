@@ -7,39 +7,43 @@
 //
 
 import UIKit
+import Realm
+import RealmSwift
 
 class MatchTableViewController: UITableViewController {
-	var allTornaments = [Tornament]()
-	var tornaments = [Tornament]()
+	var tournaments: Results<Tournament>!
+	var matches: Results<Match>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		allTornaments = JsonHelper.parse(jsonFileName: "Tornaments")
-		setAvailableTornaments()
+		fetchMatches()
     }
 	
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return tornaments.count
+        return tournaments.count
     }
 	
 	override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-		return tornaments[section].name
+		return tournaments[section].name
 	}
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return tornaments[section].matches.count
+        let tournamentId = tournaments[section].id
+		return matches.filter("tournamentId == %@", tournamentId).count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath)
 
-        // Configure the cell...
-		cell.textLabel?.text = tornaments[indexPath.section].matches[indexPath.row].name
-		cell.detailTextLabel?.text = tornaments[indexPath.section].matches[indexPath.row].localizedSubtitle
+		let tournamentId = tournaments[indexPath.section].id
+		let currentMatch = matches.filter("tournamentId == %@", tournamentId)[indexPath.row]
+		
+		cell.textLabel?.text = "VS " + currentMatch.oppoTeam
+		cell.detailTextLabel?.text = currentMatch.roundName
 
         return cell
     }
@@ -59,31 +63,10 @@ class MatchTableViewController: UITableViewController {
     }
     */
 	
-	private func fetchAllTornaments() {
-		let jsonDecoder = JSONDecoder()
-		if let tornamentsFile = Bundle.main.path(forResource: "Tornaments", ofType: "json") {
-			let data = try! Data(contentsOf: URL(fileURLWithPath: tornamentsFile))
-			allTornaments = try! jsonDecoder.decode([Tornament].self, from: data)
-		}
-	}
-	
-	private func setAvailableTornaments() {
-		let maxTornamentId = UserDefaults.standard.integer(forKey: DefaultKey.TORNAMENT)
-		let maxMatchId = UserDefaults.standard.integer(forKey: DefaultKey.MATCH)
-		
-		tornaments = [Tornament]()
-		for i in 0...maxTornamentId {
-			tornaments.append(allTornaments[i])
-			if i == maxTornamentId {
-				tornaments[i].matches = [Match]()
-				for match in allTornaments[i].matches {
-					if match.id <= maxMatchId {
-						tornaments[i].matches.append(match)
-					} else {
-						break
-					}
-				}
-			}
-		}
+	//private
+	private func fetchMatches() {
+		let realm = try! Realm()
+		tournaments = realm.objects(Tournament.self).filter("available == true")
+		matches = realm.objects(Match.self).filter("available == true")
 	}
 }

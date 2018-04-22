@@ -7,30 +7,48 @@
 //
 
 import Foundation
+import Realm
+import RealmSwift
 
-struct Match: Codable {
-	var id: Int
-	var nameEn: String
-	var nameJa: String
-	var nameZh: String
-	var subtitle: String
+class Match: Object, Codable {
+	@objc dynamic var id = 0
+	@objc dynamic var tournamentId = 0
+	@objc dynamic var round = 0
+	@objc dynamic var oppoTeamEn = ""
+	@objc dynamic var oppoTeamJa = ""
+	@objc dynamic var oppoTeamZh = ""
+	@objc dynamic var available = false
+	@objc dynamic var awardTrait = ""
+	@objc dynamic var nextMatchId = 0
 	
-	var name: String {
-		guard let language = NSLocale.current.languageCode else {
-			return nameEn
+	override static func primaryKey() -> String? {
+		return "id"
+	}
+	
+	var roundName: String {
+		switch round {
+		case 99:
+			return NSLocalizedString("Final", comment: "")
+		case 98:
+			return NSLocalizedString("Semifinal", comment: "")
+		default:
+			let rawRoundName = NSLocalizedString("Match #", comment: "")
+			return rawRoundName.replacingOccurrences(of: "#", with: "\(round)")
 		}
+	}
+	
+	var oppoTeam: String {
+		let language = Language.getCurrentLanguage()
 		
 		switch language {
-		case "ja":
-			return nameJa
-		case "zh":
-			return nameZh
+		case .ja:
+			return oppoTeamJa
+		case .zh:
+			return oppoTeamZh
 		default:
-			return nameEn
+			return oppoTeamEn
 		}
 	}
 	
-	var localizedSubtitle: String {
-		return NSLocalizedString(subtitle, comment: "")
-	}
+	
 }

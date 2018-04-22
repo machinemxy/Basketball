@@ -1,0 +1,13 @@
+[
+  {
+    "id":1,
+    "tournamentId":1,
+    "round":1,
+    "oppoTeamEn":"Class 1",
+    "oppoTeamJa":"クラス１",
+    "oppoTeamZh":"1班",
+    "available":true,
+    "awardTrait":"",
+    "nextMatchId":2
+  }
+]

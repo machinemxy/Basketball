@@ -115,10 +115,55 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Match" image="basketball" id="9qc-2o-8PK"/>
+                    <connections>
+                        <segue destination="qQK-7C-u2X" kind="show" id="q70-Vf-9pK"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="piH-dJ-nz1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1376" y="-57"/>
+            <point key="canvasLocation" x="1373" y="-57"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="F5X-wq-tcm">
+            <objects>
+                <viewController id="qQK-7C-u2X" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ufz-0I-GTK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="O9A-P7-MQk">
+                                <rect key="frame" x="0.0" y="528" width="320" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzp-yp-jSE">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="40"/>
+                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Opponent"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A47-UA-Tt7">
+                                        <rect key="frame" x="160" y="0.0" width="160" height="40"/>
+                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Return"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2uI-WD-htO"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="O9A-P7-MQk" firstAttribute="trailing" secondItem="xHQ-I6-ht1" secondAttribute="trailing" id="Tma-Mm-KyU"/>
+                            <constraint firstItem="O9A-P7-MQk" firstAttribute="bottom" secondItem="xHQ-I6-ht1" secondAttribute="bottom" id="fDy-g9-YOU"/>
+                            <constraint firstItem="O9A-P7-MQk" firstAttribute="leading" secondItem="xHQ-I6-ht1" secondAttribute="leading" id="gry-WK-RZG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xHQ-I6-ht1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3hx-Nj-HZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2160" y="-57.04225352112676"/>
         </scene>
         <!--Team-->
         <scene sceneID="6Lz-NG-j8f">
