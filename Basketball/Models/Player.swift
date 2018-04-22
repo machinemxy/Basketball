@@ -79,14 +79,12 @@ class Player: Object {
 	}
 	
 	var name: String {
-		guard let language = NSLocale.current.languageCode else {
-			return nameEn
-		}
+		let language = Language.getCurrentLanguage()
 		
 		switch language {
-		case "ja":
+		case .ja:
 			return nameJa
-		case "zh":
+		case .zh:
 			return nameZh
 		default:
 			return nameEn

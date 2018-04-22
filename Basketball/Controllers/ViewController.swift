@@ -21,13 +21,14 @@ class ViewController: UIViewController {
 		//we need to init the DB
 		let newestDBVersion = 1
 		
-		if currentDBVersion != newestDBVersion {
+		//debug mode, each time init DB
+		//if currentDBVersion != newestDBVersion {
 			initDB()
 			
 			generateDefaultPlayers()
 			
 			UserDefaults.standard.set(newestDBVersion, forKey: DefaultKey.DB_VERSION)
-		}
+		//}
 	}
 	
 	private func initDB() {

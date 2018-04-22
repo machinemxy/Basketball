@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		222A0A3E208AC01F00853376 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A0A3D208AC01F00853376 /* Language.swift */; };
 		223380D12063F9A900437BB1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223380D02063F9A900437BB1 /* Player.swift */; };
 		223380D320674CBB00437BB1 /* PlayerDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223380D220674CBB00437BB1 /* PlayerDetialViewController.swift */; };
 		22798912207F97EE00807BB7 /* Trait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22798911207F97EE00807BB7 /* Trait.swift */; };
@@ -36,7 +37,19 @@
 		22D85411207649EA0022F2BF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22D85413207649EA0022F2BF /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		222A0A48208AC59500853376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 228985BE205E897600F3B722 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 228985C5205E897600F3B722;
+			remoteInfo = Basketball;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		222A0A3D208AC01F00853376 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		222A0A43208AC59500853376 /* BasketballTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasketballTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		223380D02063F9A900437BB1 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		223380D220674CBB00437BB1 /* PlayerDetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetialViewController.swift; sourceTree = "<group>"; };
 		2279890F207E259400807BB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -77,6 +90,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		222A0A40208AC59500853376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		228985C3205E897600F3B722 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -111,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				228985C6205E897600F3B722 /* Basketball.app */,
+				222A0A43208AC59500853376 /* BasketballTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +177,7 @@
 				223380D02063F9A900437BB1 /* Player.swift */,
 				22798911207F97EE00807BB7 /* Trait.swift */,
 				227989332082F57100807BB7 /* TraitOrder.swift */,
+				222A0A3D208AC01F00853376 /* Language.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,6 +213,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		222A0A42208AC59500853376 /* BasketballTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 222A0A4A208AC59500853376 /* Build configuration list for PBXNativeTarget "BasketballTests" */;
+			buildPhases = (
+				222A0A3F208AC59500853376 /* Sources */,
+				222A0A40208AC59500853376 /* Frameworks */,
+				222A0A41208AC59500853376 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				222A0A49208AC59500853376 /* PBXTargetDependency */,
+			);
+			name = BasketballTests;
+			productName = BasketballTests;
+			productReference = 222A0A43208AC59500853376 /* BasketballTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		228985C5205E897600F3B722 /* Basketball */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 228985D8205E897600F3B722 /* Build configuration list for PBXNativeTarget "Basketball" */;
@@ -215,10 +255,15 @@
 		228985BE205E897600F3B722 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Ma Xueyuan";
 				TargetAttributes = {
+					222A0A42208AC59500853376 = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 228985C5205E897600F3B722;
+					};
 					228985C5205E897600F3B722 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -241,11 +286,19 @@
 			projectRoot = "";
 			targets = (
 				228985C5205E897600F3B722 /* Basketball */,
+				222A0A42208AC59500853376 /* BasketballTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		222A0A41208AC59500853376 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		228985C4205E897600F3B722 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -284,6 +337,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		222A0A3F208AC59500853376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		228985C2205E897600F3B722 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,6 +351,7 @@
 				228985DC205E923E00F3B722 /* DefaultKey.swift in Sources */,
 				228985DF205E956D00F3B722 /* MatchTableViewController.swift in Sources */,
 				228985E7205E9BC700F3B722 /* Tornament.swift in Sources */,
+				222A0A3E208AC01F00853376 /* Language.swift in Sources */,
 				228985CC205E897600F3B722 /* ViewController.swift in Sources */,
 				228985ED20622EAA00F3B722 /* PlayerBase.swift in Sources */,
 				2279893B2084813F00807BB7 /* TraitSetTableViewController.swift in Sources */,
@@ -309,6 +370,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		222A0A49208AC59500853376 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 228985C5205E897600F3B722 /* Basketball */;
+			targetProxy = 222A0A48208AC59500853376 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		228985CD205E897600F3B722 /* Main.storyboard */ = {
@@ -354,6 +423,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		222A0A4B208AC59500853376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EQC88F8HW8;
+				INFOPLIST_FILE = BasketballTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mxy.BasketballTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Basketball.app/Basketball";
+			};
+			name = Debug;
+		};
+		222A0A4C208AC59500853376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EQC88F8HW8;
+				INFOPLIST_FILE = BasketballTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mxy.BasketballTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Basketball.app/Basketball";
+			};
+			name = Release;
+		};
 		228985D6205E897600F3B722 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -510,6 +613,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		222A0A4A208AC59500853376 /* Build configuration list for PBXNativeTarget "BasketballTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				222A0A4B208AC59500853376 /* Debug */,
+				222A0A4C208AC59500853376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		228985C1205E897600F3B722 /* Build configuration list for PBXProject "Basketball" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

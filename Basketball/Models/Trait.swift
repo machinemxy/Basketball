@@ -25,14 +25,12 @@ class Trait: Object, Codable {
 	}
 	
 	var name: String {
-		guard let language = NSLocale.current.languageCode else {
-			return nameEn
-		}
+		let language = Language.getCurrentLanguage()
 		
 		switch language {
-		case "ja":
+		case .ja:
 			return nameJa
-		case "zh":
+		case .zh:
 			return nameZh
 		default:
 			return nameEn
@@ -40,14 +38,12 @@ class Trait: Object, Codable {
 	}
 	
 	var info: String {
-		guard let language = NSLocale.current.languageCode else {
-			return infoEn
-		}
+		let language = Language.getCurrentLanguage()
 		
 		switch language {
-		case "ja":
+		case .ja:
 			return infoJa
-		case "zh":
+		case .zh:
 			return infoZh
 		default:
 			return infoEn
