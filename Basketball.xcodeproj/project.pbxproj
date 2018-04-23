@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		222A0A3E208AC01F00853376 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A0A3D208AC01F00853376 /* Language.swift */; };
 		222A0A50208C4F6B00853376 /* Matches.json in Resources */ = {isa = PBXBuildFile; fileRef = 222A0A4F208C4F6B00853376 /* Matches.json */; };
+		222A0A52208DFF5A00853376 /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A0A51208DFF5A00853376 /* Meeting.swift */; };
+		222A0A54208E0EE500853376 /* Meetings.json in Resources */ = {isa = PBXBuildFile; fileRef = 222A0A53208E0EE500853376 /* Meetings.json */; };
+		222A0A56208E10B000853376 /* MeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A0A55208E10B000853376 /* MeetingViewController.swift */; };
 		223380D12063F9A900437BB1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223380D02063F9A900437BB1 /* Player.swift */; };
 		223380D320674CBB00437BB1 /* PlayerDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223380D220674CBB00437BB1 /* PlayerDetialViewController.swift */; };
 		22798912207F97EE00807BB7 /* Trait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22798911207F97EE00807BB7 /* Trait.swift */; };
@@ -41,6 +44,9 @@
 /* Begin PBXFileReference section */
 		222A0A3D208AC01F00853376 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		222A0A4F208C4F6B00853376 /* Matches.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Matches.json; sourceTree = "<group>"; };
+		222A0A51208DFF5A00853376 /* Meeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
+		222A0A53208E0EE500853376 /* Meetings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Meetings.json; sourceTree = "<group>"; };
+		222A0A55208E10B000853376 /* MeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingViewController.swift; sourceTree = "<group>"; };
 		223380D02063F9A900437BB1 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		223380D220674CBB00437BB1 /* PlayerDetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetialViewController.swift; sourceTree = "<group>"; };
 		2279890F207E259400807BB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 				223380D220674CBB00437BB1 /* PlayerDetialViewController.swift */,
 				2279891420821DB900807BB7 /* TraitTableViewController.swift */,
 				2279893A2084813F00807BB7 /* TraitSetTableViewController.swift */,
+				222A0A55208E10B000853376 /* MeetingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -161,6 +168,7 @@
 				22798911207F97EE00807BB7 /* Trait.swift */,
 				227989332082F57100807BB7 /* TraitOrder.swift */,
 				222A0A3D208AC01F00853376 /* Language.swift */,
+				222A0A51208DFF5A00853376 /* Meeting.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,6 +180,7 @@
 				22D85400206F58280022F2BF /* PlayerBase.json */,
 				22798913207F9A7B00807BB7 /* Traits.json */,
 				222A0A4F208C4F6B00853376 /* Matches.json */,
+				222A0A53208E0EE500853376 /* Meetings.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -263,6 +272,7 @@
 				22D85409207647A10022F2BF /* Localizable.strings in Resources */,
 				228985D4205E897600F3B722 /* LaunchScreen.storyboard in Resources */,
 				22D85401206F58280022F2BF /* PlayerBase.json in Resources */,
+				222A0A54208E0EE500853376 /* Meetings.json in Resources */,
 				228985D1205E897600F3B722 /* Assets.xcassets in Resources */,
 				228985CF205E897600F3B722 /* Main.storyboard in Resources */,
 			);
@@ -312,6 +322,8 @@
 				223380D12063F9A900437BB1 /* Player.swift in Sources */,
 				227989362083041000807BB7 /* PlayerTableViewCell.swift in Sources */,
 				22798912207F97EE00807BB7 /* Trait.swift in Sources */,
+				222A0A52208DFF5A00853376 /* Meeting.swift in Sources */,
+				222A0A56208E10B000853376 /* MeetingViewController.swift in Sources */,
 				228985FB206251B300F3B722 /* JsonHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

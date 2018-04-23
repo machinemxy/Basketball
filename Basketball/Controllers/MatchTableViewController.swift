@@ -13,6 +13,7 @@ import RealmSwift
 class MatchTableViewController: UITableViewController {
 	var tournaments: Results<Tournament>!
 	var matches: Results<Match>!
+	var selectedMatchId: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,18 +51,28 @@ class MatchTableViewController: UITableViewController {
 	
 	// MARK: - Table view delegate
 	override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-		print("chicken")
+		let tournamentId = tournaments[indexPath.section].id
+		let currentMatch = matches.filter("tournamentId == %@", tournamentId)[indexPath.row]
+		selectedMatchId = currentMatch.id
+		performSegue(withIdentifier: "meetingSegue", sender: nil)
 	}
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+		if segue.identifier == "meetingSegue" {
+			let realm = try! Realm()
+			let meeting = realm.object(ofType: Meeting.self, forPrimaryKey: selectedMatchId)
+			
+			let meetingViewController = segue.destination as! MeetingViewController
+			meetingViewController.meeting = meeting
+		}
     }
-    */
+
+	
+	@IBAction func unwindToMatchTableView(segue: UIStoryboardSegue) {
+		
+	}
 	
 	//private
 	private func fetchMatches() {
