@@ -11,14 +11,14 @@ import Realm
 import RealmSwift
 
 class Meeting: Object, Codable {
-	@objc dynamic var id = 0
+	@objc dynamic var matchId = 0
 	@objc dynamic var portrait = ""
 	@objc dynamic var speechEn = ""
 	@objc dynamic var speechJa = ""
 	@objc dynamic var speechZh = ""
 	
 	override static func primaryKey() -> String? {
-		return "id"
+		return "matchId"
 	}
 	
 	var speech: String {

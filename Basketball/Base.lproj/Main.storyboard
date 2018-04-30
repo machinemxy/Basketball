@@ -139,6 +139,9 @@
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Opponent"/>
+                                        <connections>
+                                            <segue destination="7Cz-zq-4wh" kind="show" identifier="oppoTeamSegue" id="6L2-zV-kXI"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A47-UA-Tt7">
                                         <rect key="frame" x="160" y="0.0" width="160" height="40"/>
@@ -221,7 +224,7 @@
                                                 <action selector="trait1Pressed:" destination="w8H-8a-vEf" eventType="touchUpInside" id="AMq-bN-jkX"/>
                                             </connections>
                                         </button>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank" translatesAutoresizingMaskIntoConstraints="NO" id="jat-KE-y9M">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-position" translatesAutoresizingMaskIntoConstraints="NO" id="jat-KE-y9M">
                                             <rect key="frame" x="16" y="6" width="32" height="32"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="32" id="7sa-XI-k9L"/>
@@ -681,10 +684,10 @@
             </objects>
             <point key="canvasLocation" x="2160" y="748.94366197183103"/>
         </scene>
-        <!--Team-->
+        <!--TraitSet-->
         <scene sceneID="fGV-B2-VPL">
             <objects>
-                <tableViewController id="qyl-RQ-0h6" customClass="TraitSetTableViewController" customModule="Basketball" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="qyl-RQ-0h6" userLabel="TraitSet" customClass="TraitSetTableViewController" customModule="Basketball" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="66W-0i-KuW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -739,7 +742,7 @@
                                                 <action selector="trait1Pressed:" destination="Ezm-1S-lxp" eventType="touchUpInside" id="E6D-2j-a7O"/>
                                             </connections>
                                         </button>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank" translatesAutoresizingMaskIntoConstraints="NO" id="11L-oK-VHv">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-position" translatesAutoresizingMaskIntoConstraints="NO" id="11L-oK-VHv">
                                             <rect key="frame" x="16" y="6" width="32" height="32"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="32" id="3hf-20-TI2"/>
@@ -798,10 +801,107 @@
             </objects>
             <point key="canvasLocation" x="2160" y="1462"/>
         </scene>
+        <!--OppoTeam-->
+        <scene sceneID="bEQ-9h-2Wl">
+            <objects>
+                <tableViewController id="7Cz-zq-4wh" userLabel="OppoTeam" customClass="OppoTeamTableViewController" customModule="Basketball" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5Qb-8T-YbY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9gg-SY-1aX">
+                            <rect key="frame" x="0.0" y="72" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="Return"/>
+                            <connections>
+                                <segue destination="5jL-GM-FUl" kind="unwind" unwindAction="unwindToMeetingWithSegue:" id="2ie-iz-2on"/>
+                            </connections>
+                        </button>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="playerCell" id="bAA-tI-ENp" customClass="PlayerTableViewCell" customModule="Basketball" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bAA-tI-ENp" id="B5T-YE-Lao">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byq-F2-PTh">
+                                            <rect key="frame" x="272" y="5" width="32" height="32"/>
+                                            <state key="normal" image="blank"/>
+                                            <connections>
+                                                <action selector="trait2Pressed:" destination="bAA-tI-ENp" eventType="touchUpInside" id="iop-lu-edF"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teh-uP-1lN">
+                                            <rect key="frame" x="232" y="5" width="32" height="32"/>
+                                            <state key="normal" image="blank"/>
+                                            <connections>
+                                                <action selector="trait1Pressed:" destination="bAA-tI-ENp" eventType="touchUpInside" id="zIb-fR-EA6"/>
+                                            </connections>
+                                        </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-position" translatesAutoresizingMaskIntoConstraints="NO" id="YJV-t2-eyq">
+                                            <rect key="frame" x="16" y="6" width="32" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="32" id="J5G-io-tNC"/>
+                                                <constraint firstAttribute="height" constant="32" id="uoE-sI-1ay"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiY-kh-xTi">
+                                            <rect key="frame" x="56" y="24.5" width="31" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quv-f3-WNr">
+                                            <rect key="frame" x="56" y="4" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="RiY-kh-xTi" secondAttribute="bottom" constant="4" id="3bq-2j-C4L"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RiY-kh-xTi" secondAttribute="trailing" id="Er2-6b-wBi"/>
+                                        <constraint firstItem="quv-f3-WNr" firstAttribute="top" secondItem="B5T-YE-Lao" secondAttribute="top" constant="4" id="K3N-Ey-iaF"/>
+                                        <constraint firstItem="RiY-kh-xTi" firstAttribute="leading" secondItem="YJV-t2-eyq" secondAttribute="trailing" constant="8" id="fY7-4Y-TQO"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="quv-f3-WNr" secondAttribute="trailing" id="fgm-1K-9FX"/>
+                                        <constraint firstItem="byq-F2-PTh" firstAttribute="centerY" secondItem="B5T-YE-Lao" secondAttribute="centerY" id="kT7-RG-KKL"/>
+                                        <constraint firstItem="YJV-t2-eyq" firstAttribute="centerY" secondItem="B5T-YE-Lao" secondAttribute="centerY" id="l1g-vW-kZ7"/>
+                                        <constraint firstItem="byq-F2-PTh" firstAttribute="leading" secondItem="teh-uP-1lN" secondAttribute="trailing" constant="8" id="pR0-CT-Obw"/>
+                                        <constraint firstItem="teh-uP-1lN" firstAttribute="centerY" secondItem="B5T-YE-Lao" secondAttribute="centerY" id="sJw-54-euc"/>
+                                        <constraint firstItem="quv-f3-WNr" firstAttribute="leading" secondItem="YJV-t2-eyq" secondAttribute="trailing" constant="8" id="twy-Yt-iDx"/>
+                                        <constraint firstItem="YJV-t2-eyq" firstAttribute="leading" secondItem="B5T-YE-Lao" secondAttribute="leading" constant="16" id="ucr-Lq-SCP"/>
+                                        <constraint firstAttribute="trailing" secondItem="byq-F2-PTh" secondAttribute="trailing" constant="16" id="zlb-Fq-OfD"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="btnTrait1" destination="teh-uP-1lN" id="Ib1-34-bfT"/>
+                                    <outlet property="btnTrait2" destination="byq-F2-PTh" id="lV5-jM-eWG"/>
+                                    <outlet property="imgPosition" destination="YJV-t2-eyq" id="ltq-OT-GGL"/>
+                                    <outlet property="lblDetail" destination="RiY-kh-xTi" id="5xT-TG-ExW"/>
+                                    <outlet property="lblName" destination="quv-f3-WNr" id="MKp-oF-OPo"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7Cz-zq-4wh" id="TfW-Am-mYY"/>
+                            <outlet property="delegate" destination="7Cz-zq-4wh" id="ykM-2e-jMY"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Team" image="team" id="baE-jW-Wyi"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iWg-fD-3bx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="5jL-GM-FUl" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2976" y="-57"/>
+        </scene>
     </scenes>
     <resources>
         <image name="basketball" width="32" height="32"/>
         <image name="blank" width="32" height="32"/>
+        <image name="no-position" width="32" height="32"/>
         <image name="team" width="32" height="32"/>
         <image name="trait" width="32" height="32"/>
         <image name="tsuyoko" width="1024" height="1024"/>

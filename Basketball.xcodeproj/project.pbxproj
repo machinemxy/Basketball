@@ -12,6 +12,9 @@
 		222A0A52208DFF5A00853376 /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A0A51208DFF5A00853376 /* Meeting.swift */; };
 		222A0A54208E0EE500853376 /* Meetings.json in Resources */ = {isa = PBXBuildFile; fileRef = 222A0A53208E0EE500853376 /* Meetings.json */; };
 		222A0A56208E10B000853376 /* MeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A0A55208E10B000853376 /* MeetingViewController.swift */; };
+		222A0A58208F6DB100853376 /* OppoTeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A0A57208F6DB100853376 /* OppoTeamTableViewController.swift */; };
+		222A0A5A208F708800853376 /* OppoTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A0A59208F708800853376 /* OppoTeam.swift */; };
+		222A0A5C2095F7E300853376 /* OppoTeam.json in Resources */ = {isa = PBXBuildFile; fileRef = 222A0A5B2095F7E300853376 /* OppoTeam.json */; };
 		223380D12063F9A900437BB1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223380D02063F9A900437BB1 /* Player.swift */; };
 		223380D320674CBB00437BB1 /* PlayerDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223380D220674CBB00437BB1 /* PlayerDetialViewController.swift */; };
 		22798912207F97EE00807BB7 /* Trait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22798911207F97EE00807BB7 /* Trait.swift */; };
@@ -47,6 +50,9 @@
 		222A0A51208DFF5A00853376 /* Meeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
 		222A0A53208E0EE500853376 /* Meetings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Meetings.json; sourceTree = "<group>"; };
 		222A0A55208E10B000853376 /* MeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingViewController.swift; sourceTree = "<group>"; };
+		222A0A57208F6DB100853376 /* OppoTeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OppoTeamTableViewController.swift; sourceTree = "<group>"; };
+		222A0A59208F708800853376 /* OppoTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OppoTeam.swift; sourceTree = "<group>"; };
+		222A0A5B2095F7E300853376 /* OppoTeam.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = OppoTeam.json; sourceTree = "<group>"; };
 		223380D02063F9A900437BB1 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		223380D220674CBB00437BB1 /* PlayerDetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetialViewController.swift; sourceTree = "<group>"; };
 		2279890F207E259400807BB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -147,13 +153,14 @@
 			isa = PBXGroup;
 			children = (
 				228985CB205E897600F3B722 /* ViewController.swift */,
-				228985DE205E956D00F3B722 /* MatchTableViewController.swift */,
 				228985F62062456300F3B722 /* PlayerTableViewController.swift */,
 				227989352083041000807BB7 /* PlayerTableViewCell.swift */,
 				223380D220674CBB00437BB1 /* PlayerDetialViewController.swift */,
 				2279891420821DB900807BB7 /* TraitTableViewController.swift */,
 				2279893A2084813F00807BB7 /* TraitSetTableViewController.swift */,
+				228985DE205E956D00F3B722 /* MatchTableViewController.swift */,
 				222A0A55208E10B000853376 /* MeetingViewController.swift */,
+				222A0A57208F6DB100853376 /* OppoTeamTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -169,6 +176,7 @@
 				227989332082F57100807BB7 /* TraitOrder.swift */,
 				222A0A3D208AC01F00853376 /* Language.swift */,
 				222A0A51208DFF5A00853376 /* Meeting.swift */,
+				222A0A59208F708800853376 /* OppoTeam.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,6 +189,7 @@
 				22798913207F9A7B00807BB7 /* Traits.json */,
 				222A0A4F208C4F6B00853376 /* Matches.json */,
 				222A0A53208E0EE500853376 /* Meetings.json */,
+				222A0A5B2095F7E300853376 /* OppoTeam.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -268,6 +277,7 @@
 				222A0A50208C4F6B00853376 /* Matches.json in Resources */,
 				228985EA206000D000F3B722 /* Tournaments.json in Resources */,
 				22D85411207649EA0022F2BF /* InfoPlist.strings in Resources */,
+				222A0A5C2095F7E300853376 /* OppoTeam.json in Resources */,
 				227989322082EFAE00807BB7 /* Traits.json in Resources */,
 				22D85409207647A10022F2BF /* Localizable.strings in Resources */,
 				228985D4205E897600F3B722 /* LaunchScreen.storyboard in Resources */,
@@ -305,6 +315,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				222A0A5A208F708800853376 /* OppoTeam.swift in Sources */,
+				222A0A58208F6DB100853376 /* OppoTeamTableViewController.swift in Sources */,
 				228985DC205E923E00F3B722 /* DefaultKey.swift in Sources */,
 				228985DF205E956D00F3B722 /* MatchTableViewController.swift in Sources */,
 				228985E7205E9BC700F3B722 /* Tournament.swift in Sources */,

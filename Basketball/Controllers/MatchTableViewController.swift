@@ -61,11 +61,8 @@ class MatchTableViewController: UITableViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "meetingSegue" {
-			let realm = try! Realm()
-			let meeting = realm.object(ofType: Meeting.self, forPrimaryKey: selectedMatchId)
-			
 			let meetingViewController = segue.destination as! MeetingViewController
-			meetingViewController.meeting = meeting
+			meetingViewController.matchId = selectedMatchId
 		}
     }
 

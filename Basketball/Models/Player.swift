@@ -69,8 +69,6 @@ class Player: Object {
 		player.willInsideScoring = base.willInsideScoring
 		player.trait1id = base.trait1id
 		
-		player.autoSetAbilities()
-		
 		return player
 	}
 	
@@ -108,7 +106,7 @@ class Player: Object {
 		}
 	}
 
-	private func autoSetAbilities() {
+	func autoSetAbilities() {
 		let multiplier = lv + 9
 		itl = itlBase * multiplier
 		spd = spdBase * multiplier

@@ -35,7 +35,7 @@ class PlayerTableViewCell: UITableViewCell {
 		if player.pos > 0 {
 			imgPosition.image = UIImage(named: player.posName)
 		} else {
-			imgPosition.image = UIImage(named: "blank")
+			imgPosition.image = UIImage(named: "no-position")
 		}
 		lblName.text = player.name
 		lblDetail.text = "LV: \(player.lv)  Overall: \(player.overall)"

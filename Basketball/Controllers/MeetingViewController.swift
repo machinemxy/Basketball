@@ -7,29 +7,35 @@
 //
 
 import UIKit
+import Realm
+import RealmSwift
 
 class MeetingViewController: UIViewController {
 	@IBOutlet weak var imgPortrait: UIImageView!
 	@IBOutlet weak var lblSpeech: UILabel!
 	
-	var meeting: Meeting!
+	var matchId: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        imgPortrait.image = UIImage(named: meeting.portrait)
-		lblSpeech.text = meeting.speech
+		let realm = try! Realm()
+		if let meeting = realm.object(ofType: Meeting.self, forPrimaryKey: matchId) {
+        	imgPortrait.image = UIImage(named: meeting.portrait)
+			lblSpeech.text = meeting.speech
+		}
     }
-    
-
-    /*
+	
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+		if segue.identifier == "oppoTeamSegue" {
+			let targetController = segue.destination as! OppoTeamTableViewController
+			targetController.matchId = matchId
+		}
     }
-    */
+
+	@IBAction func unwindToMeeting(segue: UIStoryboardSegue) {
+		
+	}
 
 }

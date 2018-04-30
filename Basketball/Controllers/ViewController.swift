@@ -37,6 +37,7 @@ class ViewController: UIViewController {
 		let tournaments: [Tournament] = JsonHelper.parse(jsonFileName: "Tournaments")
 		let matches: [Match] = JsonHelper.parse(jsonFileName: "Matches")
 		let meetings: [Meeting] = JsonHelper.parse(jsonFileName: "Meetings")
+		let oppoTeams: [OppoTeam] = JsonHelper.parse(jsonFileName: "OppoTeam")
 		
 		let realm = try! Realm()
 		try! realm.write {
@@ -46,6 +47,7 @@ class ViewController: UIViewController {
 			realm.add(tournaments)
 			realm.add(matches)
 			realm.add(meetings)
+			realm.add(oppoTeams)
 		}
 	}
 	
@@ -73,6 +75,8 @@ class ViewController: UIViewController {
 			if i <= 5 {
 				player.pos = i
 			}
+			player.autoSetAbilities()
+			
 			players.append(player)
 		}
 		
