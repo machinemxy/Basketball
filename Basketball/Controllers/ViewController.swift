@@ -31,6 +31,11 @@ class ViewController: UIViewController {
 		//}
 	}
 	
+	// MARK: - Navigation
+	@IBAction func unwindToTitle(segue: UIStoryboardSegue) {
+		
+	}
+	
 	private func initDB() {
 		let playerBases: [PlayerBase] = JsonHelper.parse(jsonFileName: "PlayerBase")
 		let traits: [Trait] = JsonHelper.parse(jsonFileName: "Traits")

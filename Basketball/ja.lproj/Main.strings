@@ -2,6 +2,9 @@
 "BZG-cS-Wkd.normalTitle" = "スタート";
 "DaH-eE-Ejb.normalTitle" = "クレジット";
 
+//credit view
+"YZ8-Op-Kfl.normalTitle" = "戻る";
+
 //tab bar
 "9qc-2o-8PK.title" = "試合";
 "8uI-gt-kVc.title" = "チーム";
@@ -49,3 +52,20 @@
 
 //oppo team table view
 "9gg-SY-1aX.normalTitle" = "戻る";
+
+//oppo player detail view
+"8Gs-nd-kxE.normalTitle" = "知力";
+"s1p-SO-Pco.normalTitle" = "速度";
+"5hZ-7X-31B.normalTitle" = "力量";
+"st5-Kd-Oqt.normalTitle" = "攻撃";
+"Zxb-kh-upJ.normalTitle" = "守備";
+"kKK-Mz-iOw.normalTitle" = "組織";
+"WDt-rJ-c3V.normalTitle" = "盗み";
+"Olz-q8-G5G.normalTitle" = "リバ";
+"ZB6-DN-dy1.normalTitle" = "位置";
+"UmI-lg-jM5.normalTitle" = "特性";
+"frG-ld-KR1.normalTitle" = "倾向";
+"J6Z-Db-NS6.text" = "シュート";
+"FBC-6i-qiB.text" = "突破";
+"xdj-FH-HuO.text" = "内線攻撃";
+"zq7-1q-fxf.normalTitle" = "戻る";

@@ -41,16 +41,22 @@ class OppoTeamTableViewController: UITableViewController, PlayerTableViewCellPro
 		return cell
     }
 
-    /*
+	
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+		if segue.identifier == "oppoPlayerDetailSegue" {
+			let indexPath = tableView.indexPathForSelectedRow!
+			let selectedPlayer = players[indexPath.row]
+			let targetController = segue.destination as! PlayerDetialViewController
+			targetController.player = selectedPlayer
+			targetController.readOnly = true
+		}
     }
-    */
-
+	
+	@IBAction func unwindToOppoTeamTableView(segue: UIStoryboardSegue) {
+		
+	}
+	
 	//Delegation
 	func showTraitAlert(traitAlertController: UIAlertController) {
 		self.present(traitAlertController, animated: true, completion: nil)

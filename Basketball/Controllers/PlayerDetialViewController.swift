@@ -12,6 +12,7 @@ import RealmSwift
 
 class PlayerDetialViewController: UIViewController {
 	var player: Player!
+	var readOnly = false
 	
 	@IBOutlet weak var lblName: UILabel!
 	@IBOutlet weak var lblLV: UILabel!
@@ -101,7 +102,11 @@ class PlayerDetialViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //update player
+		if readOnly {
+			return
+		}
+		
+		//update player
 		let realm = try! Realm()
 		try! realm.write {
 			player.willShoot = swShoot.isOn
@@ -131,6 +136,13 @@ class PlayerDetialViewController: UIViewController {
 		swInside.isOn = player.willInsideScoring
 		btnTrait1.setImage(player.getTraitIcon(traitOrder: .first), for: .normal)
 		btnTrait2.setImage(player.getTraitIcon(traitOrder: .second), for: .normal)
+		
+		if readOnly {
+			btnCurrentPos.isEnabled = false
+			swShoot.isEnabled = false
+			swBreak.isEnabled = false
+			swInside.isEnabled = false
+		}
 	}
 	
 	private func showPosActionSheet(_ sender: UIButton) {

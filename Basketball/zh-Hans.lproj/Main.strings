@@ -2,6 +2,9 @@
 "BZG-cS-Wkd.normalTitle" = "开始";
 "DaH-eE-Ejb.normalTitle" = "鸣谢";
 
+//credit view
+"YZ8-Op-Kfl.normalTitle" = "返回";
+
 //tab bar
 "9qc-2o-8PK.title" = "比赛";
 "8uI-gt-kVc.title" = "球队";
@@ -49,3 +52,20 @@
 
 //oppo team table view
 "9gg-SY-1aX.normalTitle" = "返回";
+
+//oppo player detail view
+"8Gs-nd-kxE.normalTitle" = "智商";
+"s1p-SO-Pco.normalTitle" = "速度";
+"5hZ-7X-31B.normalTitle" = "力量";
+"st5-Kd-Oqt.normalTitle" = "进攻";
+"Zxb-kh-upJ.normalTitle" = "防守";
+"kKK-Mz-iOw.normalTitle" = "组织";
+"WDt-rJ-c3V.normalTitle" = "断球";
+"Olz-q8-G5G.normalTitle" = "篮板";
+"ZB6-DN-dy1.normalTitle" = "位置";
+"UmI-lg-jM5.normalTitle" = "特性";
+"frG-ld-KR1.normalTitle" = "倾向";
+"J6Z-Db-NS6.text" = "空位投篮";
+"FBC-6i-qiB.text" = "持球突破";
+"xdj-FH-HuO.text" = "内线强打";
+"zq7-1q-fxf.normalTitle" = "返回";
