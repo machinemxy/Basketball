@@ -39,9 +39,12 @@
 		228985F42062421C00F3B722 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228985F22062421C00F3B722 /* Realm.framework */; };
 		228985F72062456300F3B722 /* PlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985F62062456300F3B722 /* PlayerTableViewController.swift */; };
 		228985FB206251B300F3B722 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228985FA206251B300F3B722 /* JsonHelper.swift */; };
+		22CA44F0209D710500ACC12D /* VersusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA44EF209D710500ACC12D /* VersusViewController.swift */; };
 		22D85401206F58280022F2BF /* PlayerBase.json in Resources */ = {isa = PBXBuildFile; fileRef = 22D85400206F58280022F2BF /* PlayerBase.json */; };
 		22D85409207647A10022F2BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22D8540B207647A10022F2BF /* Localizable.strings */; };
 		22D85411207649EA0022F2BF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22D85413207649EA0022F2BF /* InfoPlist.strings */; };
+		22F6C2D4209D815B00A91992 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F6C2D3209D815B00A91992 /* MatchViewController.swift */; };
+		22F6C2D6209D88A000A91992 /* AfterMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F6C2D5209D88A000A91992 /* AfterMatchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +84,7 @@
 		228985F22062421C00F3B722 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		228985F62062456300F3B722 /* PlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewController.swift; sourceTree = "<group>"; };
 		228985FA206251B300F3B722 /* JsonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
+		22CA44EF209D710500ACC12D /* VersusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersusViewController.swift; sourceTree = "<group>"; };
 		22D85400206F58280022F2BF /* PlayerBase.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PlayerBase.json; sourceTree = "<group>"; };
 		22D8540220763FF00022F2BF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		22D8540320763FF00022F2BF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 		22D8540D207647A60022F2BF /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		22D85412207649EA0022F2BF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		22D85414207649EE0022F2BF /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		22F6C2D3209D815B00A91992 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
+		22F6C2D5209D88A000A91992 /* AfterMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterMatchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +167,9 @@
 				228985DE205E956D00F3B722 /* MatchTableViewController.swift */,
 				222A0A55208E10B000853376 /* MeetingViewController.swift */,
 				222A0A57208F6DB100853376 /* OppoTeamTableViewController.swift */,
+				22CA44EF209D710500ACC12D /* VersusViewController.swift */,
+				22F6C2D3209D815B00A91992 /* MatchViewController.swift */,
+				22F6C2D5209D88A000A91992 /* AfterMatchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -315,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22F6C2D4209D815B00A91992 /* MatchViewController.swift in Sources */,
 				222A0A5A208F708800853376 /* OppoTeam.swift in Sources */,
 				222A0A58208F6DB100853376 /* OppoTeamTableViewController.swift in Sources */,
 				228985DC205E923E00F3B722 /* DefaultKey.swift in Sources */,
@@ -322,11 +332,13 @@
 				228985E7205E9BC700F3B722 /* Tournament.swift in Sources */,
 				222A0A3E208AC01F00853376 /* Language.swift in Sources */,
 				228985CC205E897600F3B722 /* ViewController.swift in Sources */,
+				22CA44F0209D710500ACC12D /* VersusViewController.swift in Sources */,
 				228985ED20622EAA00F3B722 /* PlayerBase.swift in Sources */,
 				2279893B2084813F00807BB7 /* TraitSetTableViewController.swift in Sources */,
 				2279893920847AE300807BB7 /* PlayerTableViewCellDelegate.swift in Sources */,
 				228985CA205E897600F3B722 /* AppDelegate.swift in Sources */,
 				228985F72062456300F3B722 /* PlayerTableViewController.swift in Sources */,
+				22F6C2D6209D88A000A91992 /* AfterMatchViewController.swift in Sources */,
 				223380D320674CBB00437BB1 /* PlayerDetialViewController.swift in Sources */,
 				2279891520821DB900807BB7 /* TraitTableViewController.swift in Sources */,
 				227989342082F57100807BB7 /* TraitOrder.swift in Sources */,

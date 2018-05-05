@@ -63,12 +63,28 @@ class MatchTableViewController: UITableViewController {
 		if segue.identifier == "meetingSegue" {
 			let meetingViewController = segue.destination as! MeetingViewController
 			meetingViewController.matchId = selectedMatchId
+		} else if segue.identifier == "versusSegue" {
+			//get indexPath
+			let indexPath = tableView.indexPathForSelectedRow!
+			
+			//get tournament and match selected
+			let currentTornament = tournaments[indexPath.section]
+			let currentMatch = matches.filter("tournamentId == %@", currentTornament.id)[indexPath.row]
+			
+			//pass tornament and match to target controller
+			let versusViewController = segue.destination as! VersusViewController
+			versusViewController.tournament = currentTornament
+			versusViewController.match = currentMatch
 		}
     }
 
-	
 	@IBAction func unwindToMatchTableView(segue: UIStoryboardSegue) {
 		
+	}
+	
+	@IBAction func unwindToMatchTableViewWithReload(segue: UIStoryboardSegue) {
+		fetchMatches()
+		tableView.reloadData()
 	}
 	
 	//private
