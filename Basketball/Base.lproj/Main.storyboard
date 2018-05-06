@@ -223,7 +223,7 @@
                                 <rect key="frame" x="139.5" y="307.5" width="41" height="30"/>
                                 <state key="normal" title="Finish"/>
                                 <connections>
-                                    <segue destination="MgV-DH-JXn" kind="show" id="iRv-JH-1lR"/>
+                                    <segue destination="MgV-DH-JXn" kind="show" identifier="afterMatchSegue" id="iRv-JH-1lR"/>
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YuQ-bK-7zC">
@@ -258,6 +258,7 @@
                     </view>
                     <connections>
                         <outlet property="progress" destination="YuQ-bK-7zC" id="PZo-ma-aeq"/>
+                        <outlet property="swtWon" destination="uDq-lo-VmR" id="Lg9-JP-0PH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i1A-OH-e7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -819,6 +820,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uNi-0T-43U"/>
                     </view>
+                    <connections>
+                        <outlet property="lblInfo" destination="f7S-pV-wPZ" id="EuQ-Go-e2R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lx8-QW-XMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="d3X-gK-qj0" userLabel="Exit" sceneMemberID="exit"/>

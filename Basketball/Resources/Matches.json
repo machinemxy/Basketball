@@ -8,6 +8,8 @@
     "oppoTeamZh":"1班",
     "available":true,
     "awardTrait":"",
-    "nextMatchId":2
+    "nextMatchId":2,
+    "spNo":0,
+    "cleared":false
   }
 ]

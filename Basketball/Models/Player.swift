@@ -24,6 +24,7 @@ class Player: Object {
 	@objc dynamic var plmBase = 0
 	@objc dynamic var stlBase = 0
 	@objc dynamic var rebBase = 0
+	@objc dynamic var posBase = 0
 	@objc dynamic var willShoot = false
 	@objc dynamic var willBreakthrough = false
 	@objc dynamic var willInsideScoring = false
@@ -64,6 +65,7 @@ class Player: Object {
 		player.plmBase = base.plmBase
 		player.stlBase = base.stlBase
 		player.rebBase = base.rebBase
+		player.posBase = base.posBase
 		player.willShoot = base.willShoot
 		player.willBreakthrough = base.willBreakthrough
 		player.willInsideScoring = base.willInsideScoring

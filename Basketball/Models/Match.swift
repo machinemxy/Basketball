@@ -20,6 +20,8 @@ class Match: Object, Codable {
 	@objc dynamic var available = false
 	@objc dynamic var awardTrait = ""
 	@objc dynamic var nextMatchId = 0
+	@objc dynamic var spNo = 0
+	@objc dynamic var cleared = false
 	
 	override static func primaryKey() -> String? {
 		return "id"

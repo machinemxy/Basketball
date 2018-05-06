@@ -75,11 +75,9 @@ class ViewController: UIViewController {
 			}
 			let player = Player.generate(baseOn: playerBase)
 			
-			//set the initial exp and position
+			//set the initial exp, position and abilities
 			player.exp = 50
-			if i <= 5 {
-				player.pos = i
-			}
+			player.pos = player.posBase
 			player.autoSetAbilities()
 			
 			players.append(player)
