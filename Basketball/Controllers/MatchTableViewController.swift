@@ -14,6 +14,8 @@ class MatchTableViewController: UITableViewController {
 	var tournaments: Results<Tournament>!
 	var matches: Results<Match>!
 	var selectedMatchId: Int!
+	var selectedMatch: Match!
+	var selectedTournament: Tournament!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +59,21 @@ class MatchTableViewController: UITableViewController {
 		performSegue(withIdentifier: "meetingSegue", sender: nil)
 	}
 
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		if isMyTeamValidate() {
+			//segue to versusSegue
+			selectedTournament = tournaments[indexPath.section]
+			let tournamentId = selectedTournament.id
+			selectedMatch = matches.filter("tournamentId == %@", tournamentId)[indexPath.row]
+			performSegue(withIdentifier: "versusSegue", sender: nil)
+		} else {
+			//alert
+			let alertController = UIAlertController(title: NSLocalizedString("To join the match, each position need one player.", comment: ""), message: "", preferredStyle: .alert)
+			let alertAction = UIAlertAction(title: NSLocalizedString("Close", comment: ""), style: .default, handler: nil)
+			alertController.addAction(alertAction)
+			self.present(alertController, animated: true, completion: nil)
+		}
+	}
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -64,17 +81,9 @@ class MatchTableViewController: UITableViewController {
 			let meetingViewController = segue.destination as! MeetingViewController
 			meetingViewController.matchId = selectedMatchId
 		} else if segue.identifier == "versusSegue" {
-			//get indexPath
-			let indexPath = tableView.indexPathForSelectedRow!
-			
-			//get tournament and match selected
-			let currentTornament = tournaments[indexPath.section]
-			let currentMatch = matches.filter("tournamentId == %@", currentTornament.id)[indexPath.row]
-			
-			//pass tornament and match to target controller
 			let versusViewController = segue.destination as! VersusViewController
-			versusViewController.tournament = currentTornament
-			versusViewController.match = currentMatch
+			versusViewController.tournament = selectedTournament
+			versusViewController.match = selectedMatch
 		}
     }
 
@@ -92,5 +101,17 @@ class MatchTableViewController: UITableViewController {
 		let realm = try! Realm()
 		tournaments = realm.objects(Tournament.self).filter("available == true")
 		matches = realm.objects(Match.self).filter("available == true")
+	}
+	
+	private func isMyTeamValidate() -> Bool {
+		let realm = try! Realm()
+		let players = realm.objects(Player.self)
+		//check each position, there should be one player play that position
+		for i in 1...5 {
+			if players.filter("pos == %@", i).count != 1 {
+				return false
+			}
+		}
+		return true
 	}
 }

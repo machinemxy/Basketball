@@ -861,9 +861,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="byb-83-7hR" kind="show" identifier="versusSegue" id="F9b-ZW-pC7"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -874,6 +871,7 @@
                     <tabBarItem key="tabBarItem" title="Match" image="basketball" id="9qc-2o-8PK"/>
                     <connections>
                         <segue destination="qQK-7C-u2X" kind="show" identifier="meetingSegue" id="q70-Vf-9pK"/>
+                        <segue destination="byb-83-7hR" kind="show" identifier="versusSegue" id="zhe-mD-vTP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="piH-dJ-nz1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1449,7 +1447,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" misplaced="YES" id="e20-lx-Y8U">
+                        <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" id="e20-lx-Y8U">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -1467,7 +1465,7 @@
                                 </label>
                             </subviews>
                         </stackView>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="INJ-2f-TGU">
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="INJ-2f-TGU">
                             <rect key="frame" x="0.0" y="116" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1566,7 +1564,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9gg-SY-1aX">
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9gg-SY-1aX">
                             <rect key="frame" x="0.0" y="72" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

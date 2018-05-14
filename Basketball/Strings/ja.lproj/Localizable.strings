@@ -33,3 +33,6 @@
 "Slot 2"="特性欄２";
 "(Overwrite)"="（上書き）";
 "Please choose slot"="特性欄を選んでください";
+
+//match alert
+"To join the match, each position need one player." = "試合のため、各個位置で選手一人が必要です。";

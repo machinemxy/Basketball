@@ -31,7 +31,8 @@ class AfterMatchViewController: UIViewController {
 			//unlock new matches
 			unlockNewMatch(realm: realm)
 			
-			//player development
+			//develop players
+			developPlayers(realm: realm)
 		}
     }
     
@@ -93,5 +94,10 @@ class AfterMatchViewController: UIViewController {
 				}
 			}
 		}
+	}
+	
+	private func developPlayers(realm: Realm) {
+		let players = realm.objects(Player.self).filter("pos > 0")
+		//to do
 	}
 }

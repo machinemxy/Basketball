@@ -33,3 +33,6 @@
 "Slot 2"="Slot 2";
 "(Overwrite)"="(Overwrite)";
 "Please choose slot"="Please choose slot";
+
+//match alert
+"To join the match, each position need one player." = "To join the match, each position need one player.";

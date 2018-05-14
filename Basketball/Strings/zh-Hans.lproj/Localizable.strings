@@ -33,3 +33,6 @@
 "Slot 2"="特性栏2";
 "(Overwrite)"="（覆盖）";
 "Please choose slot"="请选择特性栏";
+
+//match alert
+"To join the match, each position need one player." = "每个位置上必须有一个球员方可参加比赛。";
