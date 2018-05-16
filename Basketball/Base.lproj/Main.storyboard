@@ -140,7 +140,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Game On"/>
                                         <connections>
-                                            <segue destination="JPn-z9-XZL" kind="show" id="CeB-8G-haF"/>
+                                            <segue destination="JPn-z9-XZL" kind="show" identifier="matchSegue" id="CeB-8G-haF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJ3-Fy-GUh">
@@ -822,6 +822,11 @@
                     </view>
                     <connections>
                         <outlet property="lblInfo" destination="f7S-pV-wPZ" id="EuQ-Go-e2R"/>
+                        <outletCollection property="lblNames" destination="CP9-0j-rKb" collectionClass="NSMutableArray" id="3ge-S3-zsZ"/>
+                        <outletCollection property="lblNames" destination="oPY-Hq-qBq" collectionClass="NSMutableArray" id="Hhr-vd-6zR"/>
+                        <outletCollection property="lblNames" destination="zUS-bg-zKw" collectionClass="NSMutableArray" id="TWf-1e-mVL"/>
+                        <outletCollection property="lblNames" destination="itS-gW-YMB" collectionClass="NSMutableArray" id="B4H-6F-pvZ"/>
+                        <outletCollection property="lblNames" destination="X0O-xE-Vn5" collectionClass="NSMutableArray" id="ndS-yL-voI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lx8-QW-XMh" userLabel="First Responder" sceneMemberID="firstResponder"/>

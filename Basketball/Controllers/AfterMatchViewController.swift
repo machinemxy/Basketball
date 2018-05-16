@@ -16,6 +16,8 @@ class AfterMatchViewController: UIViewController {
 	var oppoTeam: OppoTeam!
 	
 	@IBOutlet weak var lblInfo: UILabel!
+	@IBOutlet var lblNames: [UILabel]!
+
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,7 +99,48 @@ class AfterMatchViewController: UIViewController {
 	}
 	
 	private func developPlayers(realm: Realm) {
+		//default exp power
+		var power = 5
+		if isWon {
+			power = 6
+		}
+		
+		//the stronger oppo team is, the more exp gained
+		power += oppoTeam.lv
+		
 		let players = realm.objects(Player.self).filter("pos > 0")
-		//to do
+		for player:Player in players {
+			//the stronger player is, the less exp gained
+			power -= player.lv
+			if power < 0 {
+				power = 0
+			} else if power > 60 {
+				power = 60
+			}
+			
+			//calculate the exp gained
+			let decimalExp = pow(2, power)
+			var exp = Int(truncating: NSDecimalNumber(decimal: decimalExp))
+			
+			//fill the exp gained to player
+			var lvUp = 0
+			while exp > 0 {
+				if player.exp + exp < 100 {
+					player.exp += exp
+					exp = 0
+				} else {
+					exp -= (100 - player.exp)
+					player.exp = 0
+					lvUp += 1
+					exp /= 2
+				}
+			}
+			
+			//execute the lv up
+			
+		}
+		
+		//set players changed
+		UserDefaults.standard.set(true, forKey: DefaultKey.PLAYER_CHANGED)
 	}
 }
