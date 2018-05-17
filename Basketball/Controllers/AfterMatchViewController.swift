@@ -17,7 +17,8 @@ class AfterMatchViewController: UIViewController {
 	
 	@IBOutlet weak var lblInfo: UILabel!
 	@IBOutlet var lblNames: [UILabel]!
-
+	@IBOutlet var expBars: [UIProgressView]!
+	
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,18 +101,21 @@ class AfterMatchViewController: UIViewController {
 	
 	private func developPlayers(realm: Realm) {
 		//default exp power
-		var power = 5
+		var basePower = 5
 		if isWon {
-			power = 6
+			basePower = 6
 		}
 		
 		//the stronger oppo team is, the more exp gained
-		power += oppoTeam.lv
+		basePower += oppoTeam.lv
 		
-		let players = realm.objects(Player.self).filter("pos > 0")
+		//set the UI before level change
+		let players = realm.objects(Player.self).filter("pos > 0").sorted(byKeyPath: "pos", ascending: false)
+		setUIBefore(players: players)
+		
 		for player:Player in players {
 			//the stronger player is, the less exp gained
-			power -= player.lv
+			var power = basePower - player.lv
 			if power < 0 {
 				power = 0
 			} else if power > 60 {
@@ -137,10 +141,16 @@ class AfterMatchViewController: UIViewController {
 			}
 			
 			//execute the lv up
-			
+
 		}
 		
 		//set players changed
 		UserDefaults.standard.set(true, forKey: DefaultKey.PLAYER_CHANGED)
+	}
+	
+	private func setUIBefore(players: Results<Player>) {
+		for i in 0...4 {
+			lblNames[i].text = players[i].name
+		}
 	}
 }
