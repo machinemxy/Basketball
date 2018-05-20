@@ -18,6 +18,12 @@ class AfterMatchViewController: UIViewController {
 	@IBOutlet weak var lblInfo: UILabel!
 	@IBOutlet var lblNames: [UILabel]!
 	@IBOutlet var expBars: [UIProgressView]!
+	@IBOutlet var lblLvBefores: [UILabel]!
+	@IBOutlet var lblLvArrows: [UILabel]!
+	@IBOutlet var lblLvAfters: [UILabel]!
+	@IBOutlet var lblOverallBefores: [UILabel]!
+	@IBOutlet var lblOverallArrows: [UILabel]!
+	@IBOutlet var lblOverallAfters: [UILabel]!
 	
 	
 	override func viewDidLoad() {
@@ -109,8 +115,10 @@ class AfterMatchViewController: UIViewController {
 		//the stronger oppo team is, the more exp gained
 		basePower += oppoTeam.lv
 		
-		//set the UI before level change
+		//get the players plays the game
 		let players = realm.objects(Player.self).filter("pos > 0").sorted(byKeyPath: "pos", ascending: false)
+		
+		//set the UI before level change
 		setUIBefore(players: players)
 		
 		for player:Player in players {
@@ -151,6 +159,7 @@ class AfterMatchViewController: UIViewController {
 	private func setUIBefore(players: Results<Player>) {
 		for i in 0...4 {
 			lblNames[i].text = players[i].name
+			lblOverallBefores[i].text = "\(players[i].overall)"
 		}
 	}
 }

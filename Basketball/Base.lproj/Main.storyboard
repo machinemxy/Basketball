@@ -832,6 +832,36 @@
                         <outletCollection property="expBars" destination="RBC-iw-BWa" collectionClass="NSMutableArray" id="hhK-u4-GsP"/>
                         <outletCollection property="expBars" destination="aMg-J9-KQv" collectionClass="NSMutableArray" id="Kfs-Gx-Rl8"/>
                         <outletCollection property="expBars" destination="MNR-NW-s6u" collectionClass="NSMutableArray" id="OOV-XJ-QyZ"/>
+                        <outletCollection property="lblLvBefores" destination="r3F-Ch-1UM" collectionClass="NSMutableArray" id="11B-zm-lxw"/>
+                        <outletCollection property="lblLvBefores" destination="GIR-fx-Pb4" collectionClass="NSMutableArray" id="siU-c6-5Pf"/>
+                        <outletCollection property="lblLvBefores" destination="L0H-FT-zxg" collectionClass="NSMutableArray" id="PUo-sL-h5R"/>
+                        <outletCollection property="lblLvBefores" destination="99G-NN-7WY" collectionClass="NSMutableArray" id="tFj-ID-JE5"/>
+                        <outletCollection property="lblLvBefores" destination="ETB-6l-pVU" collectionClass="NSMutableArray" id="zDO-Jy-KY3"/>
+                        <outletCollection property="lblLvArrows" destination="WWF-oF-5HX" collectionClass="NSMutableArray" id="CjL-SQ-and"/>
+                        <outletCollection property="lblLvArrows" destination="OTf-IZ-5IV" collectionClass="NSMutableArray" id="1kp-vj-nCu"/>
+                        <outletCollection property="lblLvArrows" destination="I00-0i-XMf" collectionClass="NSMutableArray" id="YgI-3O-hG5"/>
+                        <outletCollection property="lblLvArrows" destination="V6a-hv-huy" collectionClass="NSMutableArray" id="QA1-n5-26H"/>
+                        <outletCollection property="lblLvArrows" destination="zns-2q-qDz" collectionClass="NSMutableArray" id="Qad-y3-N11"/>
+                        <outletCollection property="lblLvAfters" destination="4ff-21-rME" collectionClass="NSMutableArray" id="I13-Kg-nx5"/>
+                        <outletCollection property="lblLvAfters" destination="KLU-ef-Txq" collectionClass="NSMutableArray" id="q1S-Gv-pMD"/>
+                        <outletCollection property="lblLvAfters" destination="P10-fj-y6F" collectionClass="NSMutableArray" id="edR-Nz-GT9"/>
+                        <outletCollection property="lblLvAfters" destination="t8Q-hY-j9Q" collectionClass="NSMutableArray" id="ZQZ-VI-92g"/>
+                        <outletCollection property="lblLvAfters" destination="vA8-f9-F2E" collectionClass="NSMutableArray" id="bra-3R-GwN"/>
+                        <outletCollection property="lblOverallBefores" destination="4jk-8d-pgD" collectionClass="NSMutableArray" id="aLB-eY-qYs"/>
+                        <outletCollection property="lblOverallBefores" destination="MPp-HT-J8F" collectionClass="NSMutableArray" id="s9a-pw-BH8"/>
+                        <outletCollection property="lblOverallBefores" destination="9BG-Ug-ILO" collectionClass="NSMutableArray" id="QTf-lz-REc"/>
+                        <outletCollection property="lblOverallBefores" destination="kbk-JO-BBF" collectionClass="NSMutableArray" id="0Nx-Mk-Xhq"/>
+                        <outletCollection property="lblOverallBefores" destination="hsv-UF-jhU" collectionClass="NSMutableArray" id="mNt-O7-WzH"/>
+                        <outletCollection property="lblOverallArrows" destination="zJj-oe-GFJ" collectionClass="NSMutableArray" id="2Cn-nF-QvW"/>
+                        <outletCollection property="lblOverallArrows" destination="4rR-2j-Ux9" collectionClass="NSMutableArray" id="dal-72-glq"/>
+                        <outletCollection property="lblOverallArrows" destination="stY-J3-zsi" collectionClass="NSMutableArray" id="3pW-AR-jHf"/>
+                        <outletCollection property="lblOverallArrows" destination="nc9-Lu-gRa" collectionClass="NSMutableArray" id="EZg-Xw-ewk"/>
+                        <outletCollection property="lblOverallArrows" destination="6fm-Q3-JYj" collectionClass="NSMutableArray" id="0dA-GB-ggW"/>
+                        <outletCollection property="lblOverallAfters" destination="TAf-me-fb2" collectionClass="NSMutableArray" id="YqS-KD-HmK"/>
+                        <outletCollection property="lblOverallAfters" destination="pPL-22-WKr" collectionClass="NSMutableArray" id="tYq-YZ-p5P"/>
+                        <outletCollection property="lblOverallAfters" destination="N1X-3F-eeX" collectionClass="NSMutableArray" id="frD-CL-Yql"/>
+                        <outletCollection property="lblOverallAfters" destination="vzu-sc-fTr" collectionClass="NSMutableArray" id="x5Q-5e-r0e"/>
+                        <outletCollection property="lblOverallAfters" destination="HF8-hk-mIx" collectionClass="NSMutableArray" id="BX2-9g-wb4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lx8-QW-XMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
