@@ -9,6 +9,7 @@
 import UIKit
 import Realm
 import RealmSwift
+import HandySwift
 
 class AfterMatchViewController: UIViewController {
 	var isWon: Bool!
@@ -109,7 +110,7 @@ class AfterMatchViewController: UIViewController {
 		//default exp power
 		var basePower = 5
 		if isWon {
-			basePower = 6
+			basePower += 1
 		}
 		
 		//the stronger oppo team is, the more exp gained
@@ -149,8 +150,21 @@ class AfterMatchViewController: UIViewController {
 			}
 			
 			//execute the lv up
-
+			if lvUp > 0 {
+				player.lv += lvUp
+				player.itl += Int(randomBelow: player.itlBase * 2 + 1) ?? 0 * lvUp
+				player.spd += Int(randomBelow: player.spdBase * 2 + 1) ?? 0 * lvUp
+				player.str += Int(randomBelow: player.strBase * 2 + 1) ?? 0 * lvUp
+				player.off += Int(randomBelow: player.offBase * 2 + 1) ?? 0 * lvUp
+				player.def += Int(randomBelow: player.defBase * 2 + 1) ?? 0 * lvUp
+				player.reb += Int(randomBelow: player.rebBase * 2 + 1) ?? 0 * lvUp
+				player.plm += Int(randomBelow: player.plmBase * 2 + 1) ?? 0 * lvUp
+				player.stl += Int(randomBelow: player.stlBase * 2 + 1) ?? 0 * lvUp
+			}
 		}
+		
+		//set ui after lv change
+		setUIAfter(players: players)
 		
 		//set players changed
 		UserDefaults.standard.set(true, forKey: DefaultKey.PLAYER_CHANGED)
@@ -159,7 +173,24 @@ class AfterMatchViewController: UIViewController {
 	private func setUIBefore(players: Results<Player>) {
 		for i in 0...4 {
 			lblNames[i].text = players[i].name
+			lblLvBefores[i].text = "\(players[i].lv)"
 			lblOverallBefores[i].text = "\(players[i].overall)"
+		}
+	}
+	
+	private func setUIAfter(players: Results<Player>) {
+		for i in 0...4 {
+			expBars[i].progress = Float(players[i].exp) / 100.0
+			lblLvAfters[i].text = "\(players[i].lv)"
+			lblOverallAfters[i].text = "\(players[i].overall)"
+			if lblLvAfters[i].text == lblLvBefores[i].text {
+				lblLvAfters[i].textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+				lblLvArrows[i].textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+			}
+			if lblOverallAfters[i].text == lblOverallBefores[i].text {
+				lblOverallAfters[i].textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+				lblOverallArrows[i].textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+			}
 		}
 	}
 }
