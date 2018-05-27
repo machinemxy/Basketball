@@ -11,13 +11,22 @@ import Realm
 import RealmSwift
 
 class MatchViewController: UIViewController {
-	@IBOutlet weak var progress: UIProgressView!
 	@IBOutlet weak var swtWon: UISwitch!
+	@IBOutlet weak var lblMyTeamName: UILabel!
+	@IBOutlet weak var lblScore: UILabel!
+	@IBOutlet weak var lblOppoTeamName: UILabel!
+	@IBOutlet var lblMyPlayerNames: [UILabel]!
+	@IBOutlet var lblOppoPlayerNames: [UILabel]!
+	@IBOutlet var lblMyScores: [UILabel]!
+	@IBOutlet var lblOppoScores: [UILabel]!
+	@IBOutlet var lblLogs: [UILabel]!
 	
 	var tournament: Tournament!
 	var match: Match!
 	var oppoTeam: OppoTeam!
-	
+	var timer: Timer!
+	//debug
+	var score = 0
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +34,22 @@ class MatchViewController: UIViewController {
 		//get oppoTeam
 		let realm = try! Realm()
 		oppoTeam = realm.object(ofType: OppoTeam.self, forPrimaryKey: match.id)!
+		
+		//update ui at begining
+		updateUIAtBegining()
+		
+		//set timer
+		timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { (_) in
+			self.procedure()
+		})
     }
-
-	@IBAction func changeProgress(_ sender: Any) {
-		progress.setProgress(1.0, animated: true)
+	
+	func procedure() {
+		score += 1
+		lblScore.text = "\(score)"
+		if score == 10 {
+			timer.invalidate()
+		}
 	}
 
     // MARK: - Navigation
@@ -40,4 +61,9 @@ class MatchViewController: UIViewController {
 			target.oppoTeam = oppoTeam
 		}
     }
+	
+	// MARK: private
+	private func updateUIAtBegining() {
+		
+	}
 }
