@@ -17,6 +17,9 @@
 		222A0A5C2095F7E300853376 /* OppoTeam.json in Resources */ = {isa = PBXBuildFile; fileRef = 222A0A5B2095F7E300853376 /* OppoTeam.json */; };
 		223380D12063F9A900437BB1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223380D02063F9A900437BB1 /* Player.swift */; };
 		223380D320674CBB00437BB1 /* PlayerDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223380D220674CBB00437BB1 /* PlayerDetialViewController.swift */; };
+		2233ADA720C55B5200659178 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2233ADA620C55B5200659178 /* Game.swift */; };
+		2233ADA920C5618300659178 /* Side.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2233ADA820C5618300659178 /* Side.swift */; };
+		2233ADAD20C56FC400659178 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2233ADAC20C56FC400659178 /* Position.swift */; };
 		22798912207F97EE00807BB7 /* Trait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22798911207F97EE00807BB7 /* Trait.swift */; };
 		2279891520821DB900807BB7 /* TraitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279891420821DB900807BB7 /* TraitTableViewController.swift */; };
 		227989322082EFAE00807BB7 /* Traits.json in Resources */ = {isa = PBXBuildFile; fileRef = 22798913207F9A7B00807BB7 /* Traits.json */; };
@@ -59,6 +62,9 @@
 		222A0A5B2095F7E300853376 /* OppoTeam.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = OppoTeam.json; sourceTree = "<group>"; };
 		223380D02063F9A900437BB1 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		223380D220674CBB00437BB1 /* PlayerDetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetialViewController.swift; sourceTree = "<group>"; };
+		2233ADA620C55B5200659178 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		2233ADA820C5618300659178 /* Side.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Side.swift; sourceTree = "<group>"; };
+		2233ADAC20C56FC400659178 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		2279890F207E259400807BB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		22798910207E259700807BB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		22798911207F97EE00807BB7 /* Trait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trait.swift; sourceTree = "<group>"; };
@@ -189,6 +195,9 @@
 				222A0A3D208AC01F00853376 /* Language.swift */,
 				222A0A51208DFF5A00853376 /* Meeting.swift */,
 				222A0A59208F708800853376 /* OppoTeam.swift */,
+				2233ADA620C55B5200659178 /* Game.swift */,
+				2233ADA820C5618300659178 /* Side.swift */,
+				2233ADAC20C56FC400659178 /* Position.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -332,7 +341,9 @@
 			files = (
 				22F6C2D4209D815B00A91992 /* MatchViewController.swift in Sources */,
 				222A0A5A208F708800853376 /* OppoTeam.swift in Sources */,
+				2233ADA920C5618300659178 /* Side.swift in Sources */,
 				222A0A58208F6DB100853376 /* OppoTeamTableViewController.swift in Sources */,
+				2233ADA720C55B5200659178 /* Game.swift in Sources */,
 				228985DC205E923E00F3B722 /* DefaultKey.swift in Sources */,
 				228985DF205E956D00F3B722 /* MatchTableViewController.swift in Sources */,
 				228985E7205E9BC700F3B722 /* Tournament.swift in Sources */,
@@ -342,6 +353,7 @@
 				228985ED20622EAA00F3B722 /* PlayerBase.swift in Sources */,
 				2279893B2084813F00807BB7 /* TraitSetTableViewController.swift in Sources */,
 				2279893920847AE300807BB7 /* PlayerTableViewCellDelegate.swift in Sources */,
+				2233ADAD20C56FC400659178 /* Position.swift in Sources */,
 				228985CA205E897600F3B722 /* AppDelegate.swift in Sources */,
 				228985F72062456300F3B722 /* PlayerTableViewController.swift in Sources */,
 				22F6C2D6209D88A000A91992 /* AfterMatchViewController.swift in Sources */,

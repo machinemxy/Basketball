@@ -14,6 +14,7 @@ class MatchViewController: UIViewController {
 	@IBOutlet weak var swtWon: UISwitch!
 	@IBOutlet weak var lblMyTeamName: UILabel!
 	@IBOutlet weak var lblScore: UILabel!
+	@IBOutlet weak var lblScoreToWin: UILabel!
 	@IBOutlet weak var lblOppoTeamName: UILabel!
 	@IBOutlet var lblMyPlayerNames: [UILabel]!
 	@IBOutlet var lblOppoPlayerNames: [UILabel]!
